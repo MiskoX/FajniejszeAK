@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FajniejszeAK/static/css/main.382caf84.css",
-    "main.js": "/FajniejszeAK/static/js/main.84c2ac6d.js",
+    "main.css": "/FajniejszeAK/static/css/main.14632404.css",
+    "main.js": "/FajniejszeAK/static/js/main.78caf97f.js",
     "index.html": "/FajniejszeAK/index.html",
-    "main.382caf84.css.map": "/FajniejszeAK/static/css/main.382caf84.css.map",
-    "main.84c2ac6d.js.map": "/FajniejszeAK/static/js/main.84c2ac6d.js.map"
+    "main.14632404.css.map": "/FajniejszeAK/static/css/main.14632404.css.map",
+    "main.78caf97f.js.map": "/FajniejszeAK/static/js/main.78caf97f.js.map"
   },
   "entrypoints": [
-    "static/css/main.382caf84.css",
-    "static/js/main.84c2ac6d.js"
+    "static/css/main.14632404.css",
+    "static/js/main.78caf97f.js"
   ]
 }
