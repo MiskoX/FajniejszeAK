@@ -8,10 +8,9 @@ function Quiz() {
   const [procent, setProcent] = useState(0);
   const [answeredQuestions, setAnsweredQuestions] = useState(0);
   const [allOfQuestion, setAllOfQuestion] = useState(0);
-  const [questionBoxClass, setQuestionBoxClass] = useState(null); // Stan dla klasy CSS
+  const [questionBoxClass, setQuestionBoxClass] = useState(null);
   const [stateOfQuestion, setStateOfQuestion] = useState(null);
 
-  // Efekt do pobrania danych z pliku JSON
   useEffect(() => {
     setQuestions(questionsData);
     setAllOfQuestion(questionsData.length);
@@ -22,16 +21,15 @@ function Quiz() {
     debugger;
     const answerQue = answeredQuestions + 1;
     var correctAns = correctAnswers;
-    // Sprawdzenie poprawności odpowiedzi
+    
     if (answer === questions[currentQuestionIndex].Answer) {
       correctAns = correctAns + 1;
-      setQuestionBoxClass("correct"); // Ustawienie klasy CSS dla poprawnej odpowiedzi
-      setCorrectAnswers(correctAns); // Zwiększenie liczby poprawnych odpowiedzi
+      setQuestionBoxClass("correct");
+      setCorrectAnswers(correctAns);
     } else {
-      setQuestionBoxClass("incorrect"); // Ustawienie klasy CSS dla niepoprawnej odpowiedzi
+      setQuestionBoxClass("incorrect");
     }
 
-    // Obliczenie procentu postępu
     const percentage = Math.round((correctAns / answerQue) * 100);
     setProcent(percentage);
     setAnsweredQuestions(answerQue);
@@ -42,8 +40,6 @@ function Quiz() {
     if (currentQuestionIndex + 1 < allOfQuestion) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      // Tutaj możesz dodać logikę zakończenia quizu
-      // Na przykład wyświetlić wynik końcowy lub zresetować stan quizu
       console.log("Koniec quizu");
     }
     setQuestionBoxClass(null);
