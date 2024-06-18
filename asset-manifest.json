@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FajniejszeAK/static/css/main.38bbdc2c.css",
+    "main.js": "/FajniejszeAK/static/js/main.84c2ac6d.js",
+    "index.html": "/FajniejszeAK/index.html",
+    "main.38bbdc2c.css.map": "/FajniejszeAK/static/css/main.38bbdc2c.css.map",
+    "main.84c2ac6d.js.map": "/FajniejszeAK/static/js/main.84c2ac6d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38bbdc2c.css",
+    "static/js/main.84c2ac6d.js"
+  ]
+}
