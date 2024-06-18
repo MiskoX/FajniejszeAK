@@ -18,7 +18,6 @@ function Quiz() {
   }, []);
 
   const handleAnswer = (answer) => {
-    debugger;
     const answerQue = answeredQuestions + 1;
     var correctAns = correctAnswers;
     
