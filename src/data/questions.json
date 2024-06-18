@@ -1,0 +1,1658 @@
+[
+  {
+    "Question": "Czy w CISC moze byc wykonana w VLIW",
+    "Description": "Nie, architektura VLIW dotyczy mikroprocesorów i miała na celu jak najwieksze zmniejszenie jednostki centralnej i jej rozkazów (RISC).",
+    "Answer": false,
+    "Position": 1
+  },
+  {
+    "Question": "Czy w CISC wystepuje model wymiany danych typu pamiec - pamiec",
+    "Description": "Tak, posiada równiez niewielka ilosc rejestrów.",
+    "Answer": true,
+    "Position": 2
+  },
+  {
+    "Question": "Czy w CISC jest mała liczba rozkazów",
+    "Description": "Nie, w tej architekturze jest PEŁNA (complex) lista rozkazów. Niektóre z zaawansowanych plecen nawet nie były wykorzystywane, i bum! tak powstał RISC.",
+    "Answer": false,
+    "Position": 3
+  },
+  {
+    "Question": "Czy w RISC wystepuje model wymiany danych typu rej-rej",
+    "Description": "Tak, a komunikacja z pamiecia operacyjna odbywa sie wyłacznie za pomoca rozkazów LOAD i STORE.",
+    "Answer": true,
+    "Position": 4
+  },
+  {
+    "Question": "Czy w RISC jest mała liczba trybów adresowania",
+    "Description": "Tak, raptem 4 w procesorze RISC I podczas gdy CISCi moga miec ich kilkanascie, w tym takie bardzo złozone.",
+    "Answer": true,
+    "Position": 5
+  },
+  {
+    "Question": "Czy w RISC jest wykonywanych kilka rozkazów w jednym takcie",
+    "Description": "Fałsz. Prawdziwe wykonywanie wielu rozkazów w jednym takcie wymaga superskalarnosci - wielu jednostek potokowych. Cecha architektury RISC jest potokowosc, ale pojedyncza.",
+    "Answer": false,
+    "Position": 6
+  },
+  {
+    "Question": "Czy w RISC jest wykonywanych kilka rozkazów w jednym takcie (w danej chwili czasu)",
+    "Description": "Chodzi o przetwarzanie potokowe. Tu jest haczyk - pierwszy procesor RISC I (1980) stawiał sobie za cel wykonanie jednego rozkazu w jednym takcie i dokładnie tak brzmiało jego załozenie projektowe. Jednak jego fizyczna realizacja (1982) posiadała dwustopniowy potok. Równiez w wykładach jako cecha tej architektury jest napisane ”Intensywne wykorzystanie przetwarzania potokowego”, co odnosi sie do faktu, ze obecnie nie ma procesora typu RISC, który go nie ma. Wg mnie prawda.",
+    "Answer": true,
+    "Position": 7
+  },
+  {
+    "Question": "Czy w RISC jest wykonywanych kilka instrukcji procesora w jednym rozkazie asemblerowym",
+    "Description": "Nic mi na ten temat nie wiadomo. Brzmi jednak zbyt hardo i odlegle od tematu zmniejszania ilosci rozkazów.",
+    "Answer": false,
+    "Position": 8
+  },
+  {
+    "Question": "Czy w RISC jest układ sterowania w postaci logiki szytej",
+    "Description": "Tak",
+    "Answer": true,
+    "Position": 9
+  },
+  {
+    "Question": "Architektura RISC charakteryzuje sie nieduza liczba trybów adresowania",
+    "Description": "Cecha architektury RISC jest prostota. Wszystkie rozkazy posiadaja jednakowy rozmiar i wystarcza minimalna liczba trybów adresowania.",
+    "Answer": true,
+    "Position": 10
+  },
+  {
+    "Question": "Architektura RISC charakteryzuje się modelem obliczen pamiec - pamiec",
+    "Description": "Nie, ten model był stosowany w CISCach, które posiadały niewielka liczbe rejestrów poniewaz były drozsze oraz obawiano sie wzrostu czasu przełaczania kontekstu.",
+    "Answer": false,
+    "Position": 11
+  },
+  {
+    "Question": "Architektura RISC charakteryzuje się wykorzystaniem mikroprogramowalnych układów sterujacych",
+    "Description": "Takie układy były stosowane w CISCach. Jest to tez rozwiazanie bardzo stare (poczatki w latach 50-tych).",
+    "Answer": false,
+    "Position": 12
+  },
+  {
+    "Question": "Architektura RISC charakteryzuje się niezbyt obszerna lista rozkazów",
+    "Description": "RISC dazył do uproszenie listy rozkazów, które w CISCach były ogromne i z wiekszosci sie nie korzystało.",
+    "Answer": true,
+    "Position": 13
+  },
+  {
+    "Question": "Architektura RISC charakteryzuje się intensywnym wykorzystaniem przetwarzania potokowego",
+    "Description": "Był to jeden z kluczowych elementów sukcesu procesorów RISC.",
+    "Answer": true,
+    "Position": 14
+  },
+  {
+    "Question": "Okna rejestrów chronia przez hazardem danych",
+    "Description": "Lolnope, od tego sa mechanizmy skoków opóznionych i przewidywania rozgałezien. Okno rejestrów zapewnia ciagłe i optymalne wykonywanie procedur.",
+    "Answer": false,
+    "Position": 15
+  },
+  {
+    "Question": "Okna rejestrów minimalizuja liczbe odwołan do pamieci operacyjnej przy operacjach wywołania procedur",
+    "Description": "Tak, dokładnie do tego one słuza. Rejestr niski procedury A staje sie rejestrem wysokim procedury B itd. Innymi słowy, procedura A wywołuje procedure B, i tak dalej. I po cos w tym wszystkim sa rejestry globalne.",
+    "Answer": true,
+    "Position": 16
+  },
+  {
+    "Question": "Okna rejestrów sa charakterystyczne dla architektury CISC",
+    "Description": "Nie, zostały zaprojektowane specjalnie dla architektury RISC. Jako pierwszy posiadał je procesor RISC I.",
+    "Answer": false,
+    "Position": 17
+  },
+  {
+    "Question": "Okna rejestrów sa zamykane po błednym przewidywaniu wykonania skoków warunkowych.",
+    "Description": "W mechanizmie prognozowania rozgałezien jest mozliwosc błednego przewidywania. Jednak błedna prognoza powoduje tylko zmiane strategii (przewidywanie wykonania lub niewykonania), a nie zamykanie okna.",
+    "Answer": false,
+    "Position": 18
+  },
+  {
+    "Question": "Okna rejestrów sa przesuwane przy operacjach wywołania procedur",
+    "Description": "Tak, z kazda nowa wywołana procedura okno rejestrów przesuwane jest w dół (ze 137 do 0)",
+    "Answer": true,
+    "Position": 19
+  },
+  {
+    "Question": "Okna rejestrów Sa przesuwane przy wystapieniu rozkazów rozgałezien.",
+    "Description": "W architekturze SPARC okno jest przesuwane rozkazami SAVE i RESTORE, na zyczenie programisty, a nie na wskutek rozkazów warunkowych.",
+    "Answer": false,
+    "Position": 20
+  },
+  {
+    "Question": "Okna rejestrów Sa otwierane przy wystepowaniu rozkazów rozgałezien.",
+    "Description": "Sa otwierane przy wywołaniu funkcji.",
+    "Answer": false,
+    "Position": 21
+  },
+  {
+    "Question": "Przetwarzanie potokowe Nie jest realizowane dla operacji zmiennoprzecinkowych",
+    "Description": "Nie ma takiego ograniczenia. Przetwarzanie potokowe dotyczy optymalizacji czasu wykonywania rozkazów - podziału realizacji rozkazu na fazy. Owszem, dla argumentów zmiennoprzecinkowych moga wystapic problemy zwiazane z czasem obliczen (uniemozliwienie wykonania rozkazu w jednym takcie), co moze zablokowac napełnianie potoku, jednak nie uniemozliwia to zastosowania potoku.",
+    "Answer": false,
+    "Position": 22
+  },
+  {
+    "Question": "Przetwarzanie potokowe Nie jest realizowane w procesorach CISC",
+    "Description": "Przetwarzanie potokowe znalazło zastosowanie głównie w architekturze RISC, jednak CISC tez z niej korzysta. Przykłady: VAX 11/780 (CISC), Ultra SPARC III (RISC)",
+    "Answer": false,
+    "Position": 23
+  },
+  {
+    "Question": "Przetwarzanie potokowe Daje przyspieszenie nie wieksze od liczby segmentów (stopni) jednostki potokowej",
+    "Description": "Tak, przyspieszenie jest stosunkiem czasu wykonywania n rozkazów dla procesora niepotokowego oraz czasu dla procesora potokowego. W idealnym przypadku, gdy kazdy stopien dzieli okres rozkazu po równo, a liczba rozkazów dazy do nieskonczonosci, stosunek ten jest równy P - ilosci stopni.",
+    "Answer": true,
+    "Position": 24
+  },
+  {
+    "Question": "Przetwarzanie potokowe W przypadku wystapienia zaleznosci miedzy danymi wywołuje bład i przerwanie wewnetrzne. ",
+    "Description": "Hm, dobre pytanie. Tak, zaleznosci danych moga wystapic (zjawisko hazardu) i rozdupic program, ale po to własnie istnieja mechanizmy by temu zapobiegac. Kazda szanujaca sie architektura to potrafi: albo sprzetowo, albo na etapie kompilacji, która modyfikuje i optymalizuje program. A jezeli po modyfikacji pewien rozkaz nie wykona sie w jednym takcie, napełnianie potoku jest przerywane (ale błedu chyba nie wywala), patrz wyzej.",
+    "Answer": false,
+    "Position": 25
+  },
+  {
+    "Question": "Przetwarzanie potokowe Jest realizowane tylko dla operacji zmiennoprzecinkowych",
+    "Description": "Pfff, no chyba nie XD Jest realizowane dla kazdego rodzaju rozkazu.",
+    "Answer": false,
+    "Position": 26
+  },
+  {
+    "Question": "Mechanizmy potokowe stosowane sa w celu Uszeregowania ciagu wykonywanych rozkazów",
+    "Description": "Nie, zupełnie nie o to chodzi. Ciag moze zostac uszeregowany przez kompilator w celu optymalizacji. Jednak celem tego mechanizmu jest zrównoleglenie wykonywania rozkazów ! zmiana kolejnosci ich realizacji nie jest załozeniem.",
+    "Answer": false,
+    "Position": 27
+  },
+  {
+    "Question": "Mechanizmy potokowe stosowane sa w celu Uzyskania równoległej realizacji rozkazów",
+    "Description": "No tyc. Potoki umozliwiaja realizacje wielu rozkazów jednoczesnie dzielac jednostke centralna na wg stopni, jak np. pobranie rozkazu i wykonania rozkazu. Dzieki temu dwa rozkazy moga wykonywac sie jednoczesnie, oba w innych fazach (jednostkach czasu).",
+    "Answer": true,
+    "Position": 28
+  },
+  {
+    "Question": "Mechanizmy potokowe stosowane sa w celu Przyspieszenia realizacji rozkazów",
+    "Description": "Tak, to główny cel. Umozliwienie wykonania rozkazów umozliwia przyspieszenie, które oblicza sie jako stosunek czasu wykonywania rozkazów w procesorze niepotokowym do czasu realizacji w procesorze potokowym. W idealnym przypadku jest ono równe P - ilosci podziałów / stopni / faz / zwał jak zwał.",
+    "Answer": true,
+    "Position": 29
+  },
+  {
+    "Question": "Hazard danych Czasami moze byc usuniety przez zmiane kolejnosci wykonania rozkazów",
+    "Description": "Tak, słuzy do tego mechanizm skoków opóznionych, który odbywa sie na poziomie kompilacji programu.",
+    "Answer": true,
+    "Position": 30
+  },
+  {
+    "Question": "Hazard danych Nie wystepuje w architekturze superskalarnej",
+    "Description": "Wystepuje wszedzie tam gdzie jest potokowe przetwarzania rozkazów.",
+    "Answer": false,
+    "Position": 31
+  },
+  {
+    "Question": "Hazard danych Jest eliminowany przez zastosowanie specjalnego bitu w kodzie program",
+    "Description": "Nic mi o tym nie wiadomo. Pewne dodatkowe bity sa wykorzystywane w mechanizmie przewidywania rozgałezien, który słuzy do eliminacji hazardu, jednak on to odbywa sie PRZED realizacja programu i sprowadza sie do zmiany kolejnosci wykonywania rozkazów przez kompilator. Nic nie dodaje do tresci programu.",
+    "Answer": false,
+    "Position": 32
+  },
+  {
+    "Question": "Hazard danych Moze wymagac wyczyszczenia potoku i rozpoczecia nowej (...)",
+    "Description": "Nie wiem jak hazard danych moze czegokolwiek wymagac skoro jest zjawiskiem ubocznym i je eliminujemy. Sprzetowa i programowa",
+    "Answer": false,
+    "Position": 33
+  },
+  {
+    "Question": "Hazard danych mozna ominac Poprzez rozgałezienia",
+    "Description": "Nie, rozgałezienie to po prostu instrukcje typu IF, które tworza takie rozgałezienia. Mechanizm przewidywania rozgałezien jest stosowany do usuwania hazardu sterowania zwiazanego ze skokami i rozgałezieniami.",
+    "Answer": false,
+    "Position": 34
+  },
+  {
+    "Question": "Hazard danych mozna ominac Poprzez uproszczenie adresowania - adresowanie bezposrednie.",
+    "Description": "Bullshit. Nie wiem w czym miało by pomóc uproszczenia adresowania, poza pójsciem w strone RISCu, ale na hazard to nie pomoze. Tym mozna tylko skrócic czas odwołania sie do danych.",
+    "Answer": false,
+    "Position": 35
+  },
+  {
+    "Question": "Hazard danych mozna ominac Przez zamiane rozkazów",
+    "Description": "Tak, i na tym polega mechanizm skoków opóznionych, które moga program zmodyfikowac (dodac rozkaz NOP) albo zoptymalizowac, własnie zamieniaja rozkazy kolejnoscia.",
+    "Answer": true,
+    "Position": 36
+  },
+  {
+    "Question": "Dla unikniecia hazardu danych mozna Zastosowac uproszczone metody adresacji.",
+    "Description": "RISC nie eliminuje hazardu XD Skracaja tylko czas dostepu do pamieci.",
+    "Answer": false,
+    "Position": 37
+  },
+  {
+    "Question": "Dla unikniecia hazardu danych mozna Wykorzystac szyne zwrotna.",
+    "Description": "Szyna zwrotna jest stosowana by zastosowac ”wyprzedzajace pobieranie argumentów”, które eliminuje prawdziwa zaleznosc danych (RAW).",
+    "Answer": true,
+    "Position": 38
+  },
+  {
+    "Question": "Dla unikniecia hazardu danych mozna Zastosowac specjalny bit w kodzie rozkazu.",
+    "Description": "Jeden dodatkowy bicik nie sprawi, ze argument bedzie odczytany poprawnie.",
+    "Answer": false,
+    "Position": 39
+  },
+  {
+    "Question": "Dla unikniecia hazardu danych mozna Zastosowac tablice historii rozgałezien.",
+    "Description": "Ona eliminuje hazard sterowania.",
+    "Answer": false,
+    "Position": 40
+  },
+  {
+    "Question": "Dla unikniecia hazardu danych mozna Wstrzymac na 1 takt napełnianie potoku.",
+    "Description": "Tak, to moze wyeliminowac antyzaleznosc (WAR).",
+    "Answer": true,
+    "Position": 41
+  },
+  {
+    "Question": "Mechanizm skoków opóznionych Polega na opóznianiu wykonywania skoku do czasu wykonania rozkazu nastepnego za skokiem",
+    "Description": "Tak, cały ten mechanizm sprowadza sie do opóznienia efektu skoku o jeden rozkaz. Zapewnia to, ze rozkaz nastepny po skoku zawsze bedzie wykonywany w całosci.",
+    "Answer": true,
+    "Position": 42
+  },
+  {
+    "Question": "Mechanizm skoków opóznionych Wymaga wstrzymania potoku na jeden takt.",
+    "Description": "Nie, mechanizm potoków nie musi byc wstrzymywany. Mechanizm ten zmienia postac programu w trakcie kompilacji, ale na sama realizacje potoku nie ma wpływu (afaik, not sure).",
+    "Answer": false,
+    "Position": 43
+  },
+  {
+    "Question": "Mechanizm skoków opóznionych Powoduje bład na koncu petli",
+    "Description": "Pfff, jak programista ssie pałe to tak, jednak w załozeniu tak sie nie dzieje.",
+    "Answer": false,
+    "Position": 44
+  },
+  {
+    "Question": "Mechanizm skoków opóznionych Wymaga umieszczenia rozkazu NOP za rozkazem skoku lub reorganizacje programu",
+    "Description": "Tak, mechanizm sprowadza sie do tego, i tylko do tego, patrz pierwsza odpowiedz.",
+    "Answer": true,
+    "Position": 45
+  },
+  {
+    "Question": "Tablica historii rozgałezien Zawiera m.in. adresy rozkazów rozgałezien",
+    "Description": "Tak, tablica ta zawiera bit waznosci, adres rozkazu rozgałezienia, bity historii oraz adres docelowy rozgałezienia.",
+    "Answer": true,
+    "Position": 46
+  },
+  {
+    "Question": "Tablica historii rozgałezien Pozwala zminimalizowac liczbe błednych przewidywan rozgałezien w zagniezdzonej petli",
+    "Description": "Tak, z tego co wiem jest strategia dynamiczna i najbardziej optymalna ze wszystkich - skonczony automat przewidywania rozgałezien oparty na tej tablicy (z dwoma bitami historii) moze byc zrealizowany na dwóch bitach.",
+    "Answer": true,
+    "Position": 47
+  },
+  {
+    "Question": "Tablica historii rozgałezien Nie moze byc stosowana w procesorach CISC",
+    "Description": "Ten mechanizm słuzy zabezpieczeniu przed hazardem, który wystepuje w przetwarzaniu potokowym, a z tego korzystaja zarówno CISC jak i RISC.",
+    "Answer": false,
+    "Position": 48
+  },
+  {
+    "Question": "Tablica historii rozgałezien Jest obsługiwana przez jadro systemu operacyjnego",
+    "Description": "Chyba nie, ten mechanizm znajduje sie w sprzecie procesora.",
+    "Answer": false,
+    "Position": 49
+  },
+  {
+    "Question": "Tablica historii rozgałezien Jest stosowana do statycznego przewidywania rozgałezien.",
+    "Description": "Ona słuzy do dynamicznego przewidywania rozgałezien. Poczatkowe strategie sa statyczne, ale pózniej zmieniaja sie w dynamiczne.",
+    "Answer": false,
+    "Position": 50
+  },
+  {
+    "Question": "Tablica historii rozgałezien Pozwala zapamietac cała historie wykonan kazdego rozkazu rozgałezienia.",
+    "Description": "Tablica poswieca dla kazdego rozkazu pewna skonczona liczbe bitów w celu przewidzenia rozgałezienia.",
+    "Answer": false,
+    "Position": 51
+  },
+  {
+    "Question": "W tablicy historii rozgałezien z 1 bitem historii mozna zastosowac nastepujacy algorytm przewidywania (najbardziej złozony) : Skok opózniony",
+    "Description": "Nie, skoki opóznione nie słuza do przewidywania rozgałezien, sa zupełnie innym mechanizmem eliminacji hazardu.",
+    "Answer": false,
+    "Position": 52
+  },
+  {
+    "Question": "W tablicy historii rozgałezien z 1 bitem historii mozna zastosowac nastepujacy algorytm przewidywania (najbardziej złozony) : Przewidywanie, ze rozgałezienie (skok warunkowy) zawsze nastapi",
+    "Description": "Nie, to strategia statyczna, która moze byc wykonywana gdy adres rozkazu rozgałezienia NIE jest w tablicy. Nie wykorzystuje bitu historii.",
+    "Answer": false,
+    "Position": 53
+  },
+  {
+    "Question": "W tablicy historii rozgałezien z 1 bitem historii mozna zastosowac nastepujacy algorytm przewidywania (najbardziej złozony) : Przewidywanie, ze rozgałezienie nigdy nie nastapi",
+    "Description": "Nie, to strategia statyczna, która moze byc wykonywana gdy adres rozkazu rozgałezienia NIE jest w tablicy. Nie wykorzystuje bitu historii.",
+    "Answer": false,
+    "Position": 54
+  },
+  {
+    "Question": "W tablicy historii rozgałezien z 1 bitem historii mozna zastosowac nastepujacy algorytm przewidywania (najbardziej złozony) : Przewidywanie, ze kolejne wykonanie rozkazu rozgałezienia bedzie przebiegało tak samo jak poprzednie",
+    "Description": "Tak, i to jest wszystko na co stac historie 1-bitowa. Historia 2-bitowa umozliwia interpretacje:- historii ostatniego wykonania skoku - tak lub nie; - przewidywania nastepnego wykonania skoku - tak lub nie A zamiana strategii nastepuje dopiero po drugim błedzie przewidywania.",
+    "Answer": true,
+    "Position": 55
+  },
+  {
+    "Question": "W tablicy historii rozgałezien z 1 bitem historii mozna zastosowac nastepujacy algorytm przewidywania (najbardziej złozony) : Wstrzymanie napełniania potoku",
+    "Description": "Nie, wstrzymywanie potoku moga spowodowac algorytmy zajmujace sie eliminacja hazardu danych - zaleznosci miedzy argumentami.",
+    "Answer": false,
+    "Position": 56
+  },
+  {
+    "Question": "Problemy z potokowym wykonywaniem rozkazów skoków (rozgałezien) moga byc wyeliminowane lub ograniczone przy pomocy: Zapewnienia spójnosci pamieci podrecznej",
+    "Description": "Nie, to problem komputerów wieloprocesorowych.",
+    "Answer": false,
+    "Position": 57
+  },
+  {
+    "Question": "Problemy z potokowym wykonywaniem rozkazów skoków (rozgałezien) moga byc wyeliminowane lub ograniczone przy pomocy: Tablicy historii rozgałezien",
+    "Description": "Tak, to najprawdopodobniej najlepszy słuzacy ku temu mechanizm. Stara sie przewidywac czy skok bedzie wykonany badz nie, wykorzystuje do tego kilka strategii.",
+    "Answer": true,
+    "Position": 58
+  },
+  {
+    "Question": "Problemy z potokowym wykonywaniem rozkazów skoków (rozgałezien) moga byc wyeliminowane lub ograniczone przy pomocy: Techniki wyprzedzajacego pobrania argumentu",
+    "Description": "Nie, ten mechanizm słuzy do eliminacji hazardu danych - zaleznosci miedzy argumentami.",
+    "Answer": false,
+    "Position": 59
+  },
+  {
+    "Question": "Problemy z potokowym wykonywaniem rozkazów skoków (rozgałezien) moga byc wyeliminowane lub ograniczone przy pomocy: Wystawienia do programu rozkazów typu „nic nie rób”",
+    "Description": "Tak, tym rozkazem jest NOP i jest wstawiany przez mechanizm skoków opóznionych, który słuzy do zabezpieczania potoku.",
+    "Answer": true,
+    "Position": 60
+  },
+  {
+    "Question": "Problemy z potokowym wykonywaniem rozkazów skoków (rozgałezien) moga byc wyeliminowane lub ograniczone przy pomocy: Protokołu MESI",
+    "Description": "Nie, on jest od zapewnienia spójnosci pamieci wspólnej czy jakos tak.",
+    "Answer": false,
+    "Position": 61
+  },
+  {
+    "Question": "Problemy z potokowym wykonywaniem rozkazów skoków (rozgałezien) moga byc wyeliminowane lub ograniczone przy pomocy: Wykorzystania techniki skoków opózniajacych",
+    "Description": "Tak, umozliwiaja ona modyfikacje programu (wstawienie rozkazu NOP), albo jego optymalizacje (zamiana kolejnosci wykonywania rozkazów.) Mechanizm ten opóznia efekt skoku o jeden rozkaz, co zapewnia, ze rozkaz po skoku bedzie w całosci wykonany.",
+    "Answer": true,
+    "Position": 62
+  },
+  {
+    "Question": "Problemy z potokowym wykonywaniem rozkazów skoków (rozgałezien) moga byc wyeliminowane lub ograniczone przy pomocy: Technologii MMX",
+    "Description": "Polega zupełnie na czym innym.",
+    "Answer": false,
+    "Position": 63
+  },
+  {
+    "Question": "Konsekwencja błedu przy przewidywaniu rozgałezien moze byc Wstrzymanie realizowanego watku i przejscie do realizacji innego watku",
+    "Description": "Przewidywanie rozgałezien odbywa sie lokalnie, osobno dla kazdego watku.",
+    "Answer": false,
+    "Position": 64
+  },
+  {
+    "Question": "Konsekwencja błedu przy przewidywaniu rozgałezien moze byc Koniecznosc wyczyszczenia kolejki rozkazów do potoku",
+    "Description": "W przypadku jezeli mechanizm przewidywania rozgałezienia sie pomyli i zacznie pobierac rozkazy z błednego rozgałezienia, potok rozkazów musi zostac wyczyszczony. Czyli np. w IFie miało byc true, a okazało sie, ze false, to nalezy zbedne pobrane rozkazy wyczyscic.",
+    "Answer": true,
+    "Position": 65
+  },
+  {
+    "Question": "Konsekwencja błedu przy przewidywaniu rozgałezien moze byc Koniecznosc wyczyszczenia tablicy historii rozgałezien.",
+    "Description": "W przypadku błedu nalezy tablice aktualizowac, aby w przyszłosci to rozgałezienie było przewidywane z wieksza dokładnoscia.",
+    "Answer": false,
+    "Position": 66
+  },
+  {
+    "Question": "Konsekwencja błedu przy przewidywaniu rozgałezien moze byc Przerwanie realizowanego procesu / watku i sygnalizacja wyjatku",
+    "Description": "Nie, nalezy jedynie zmienic strategie / przejsc do innej gałezi, a nie usuwac proces. Bład przewidywania rozgałezien nie jest czyms na tyle złym, by przerywac program. To naturalna konsekwencja potokowosci, z która nalezy sie uporac.",
+    "Answer": false,
+    "Position": 67
+  },
+  {
+    "Question": "Konsekwencja błedu przy przewidywaniu rozgałezien moze byc Koniecznosc przemianowania rejestrów w procesorach",
+    "Description": "Przemianowanie rejestrów wystepuje by procesorach skalarnych w celu równoległej realizacji zadan na potokach.",
+    "Answer": false,
+    "Position": 68
+  },
+  {
+    "Question": "W procesorach superskalarnych Liczba rozkazów, które procesor moze wykonac w 1 takcie zalezy od liczby jednostek potokowych w procesorze",
+    "Description": "Procesory superskalarne posiadaja wiele jednostek potokowych, które sa konieczne by móc wykonywac wiele rozkazów w jednym takcie. Od ich liczby zalezy owa liczba rozkazów.",
+    "Answer": true,
+    "Position": 69
+  },
+  {
+    "Question": "W procesorach superskalarnych Liczba rozkazów, które procesor moze wykonac w jednym takcie, zalezy od liczby stopni potoku.",
+    "Description": "Nie, liczba stopni potoku mówi, na ile czesci dzieli sie dany rozkaz w tej jednostce potokowej. One umozliwiaja wykonanie wielu rozkazów w jednej jednostce czasu, jednak nie przekłada sie to bezposrednio na liczbe rozkazów, ze wzgledu na zawikłania czasowe, oraz nie jest to idea procesora superskalarnego.",
+    "Answer": false,
+    "Position": 70
+  },
+  {
+    "Question": "W procesorach superskalarnych Liczba rozkazów pobieranych z pamieci, w kazdym takcie musi przekraczac liczbe jednostek potokowych",
+    "Description": "Liczba pobranych rozkazów powinna byc co najmniej równa ilosci jednostek potokowych.",
+    "Answer": false,
+    "Position": 71
+  },
+  {
+    "Question": "W procesorach superskalarnych Liczba rozkazów, które procesor moze wykonac w taktach zalezy od liczby jednostek potokowych w procesorze",
+    "Description": "Procesory superskalarne posiadaja wiele jednostek potokowych, które sa konieczne by móc wykonywac wiele rozkazów w jednym takcie. Od ich liczby zalezy owa liczba rozkazów.",
+    "Answer": true,
+    "Position": 72
+  },
+  {
+    "Question": "W procesorach superskalarnych Jest mozliwe równoległe wykonywanie kilku rozkazów w jednym procesorze (rdzeniu)",
+    "Description": "Tak, własnie taka jest idea stworzenia procesorów superskalarnych, by móc w jednym takcie wykonac \u003E 1 liczby instrukcji. Zapewnia to niepojedyncza liczba jednostek potokowych.",
+    "Answer": true,
+    "Position": 73
+  },
+  {
+    "Question": "W procesorach superskalarnych Rozszerzenia architektury wykorzystujace model SIMD umozliwiaja wykonanie rozkazów wektorowych",
+    "Description": "Tak, ”pojedyncza instrukcja - wiele urzadzen”. To rozszerzenie korzysta z mozliwosci architektury superskalarnej - mozliwosci wykonywania wielu rozkazów w 1 takcie - i realizuje pojedynczy rozkaz na wielu rejestrach jednoczesnie.",
+    "Answer": true,
+    "Position": 74
+  },
+  {
+    "Question": "W procesorach superskalarnych Nie wystepuje prawdziwa zaleznosc danych",
+    "Description": "Niestety wystepuje, i prawde mówiac, wystepuje tutaj kazdy rodzaj zaleznosci miedzy rozkazami: prawdziwa zaleznosc danych, zaleznosc wyjsciowa oraz antyzaleznosc.",
+    "Answer": false,
+    "Position": 75
+  },
+  {
+    "Question": "W procesorach superskalarnych Moga wystapic nowe formy hazardu danych: zaleznosci wyjsciowe miedzy rozkazami oraz antyzaleznosci",
+    "Description": "Tak, brak uzasadnienia.",
+    "Answer": true,
+    "Position": 76
+  },
+  {
+    "Question": "W procesorach superskalarnych Nie wystepuje hazard danych (problemy z potokowym wykonaniem rozkazów o zaleznych argumentach).",
+    "Description": "Nie, brak uzasadnienia.",
+    "Answer": false,
+    "Position": 77
+  },
+  {
+    "Question": "W procesorach superskalarnych Hazard sterowania jest całkowicie eliminowany przez statyczne strategie przewidywania rozgałezien.",
+    "Description": "Superskalarna architektura ma mechanizm dynamicznego przewidywania, a poza tym, ani statyczne, ani dynamiczne strategie nie eliminuja całkowicie hazardu sterowania.",
+    "Answer": false,
+    "Position": 78
+  },
+  {
+    "Question": "Architektura superskalarna Dotyczy systemów SMP",
+    "Description": "Zdecydowanie nie tylko. Architektura superskalarna wymaga mechanizmu potokowego, czyli dotyczy głównie architektury RISC.",
+    "Answer": false,
+    "Position": 79
+  },
+  {
+    "Question": "Architektura superskalarna Wymaga zastosowania protokołu MESI",
+    "Description": "Nie, architektura superskalarna wymaga jedynie zastosowania co najmniej dwóch jednostek potokowych.",
+    "Answer": false,
+    "Position": 80
+  },
+  {
+    "Question": "Architektura superskalarna Umozliwia równoległe wykonywanie kilku rozkazów w jednym procesorze",
+    "Description": "Tak, i taki jest cel jej istnienia. Umozliwia to mechanizm potokowy.",
+    "Answer": true,
+    "Position": 81
+  },
+  {
+    "Question": "Architektura superskalarna Wywodzi sie z architektury VLIW",
+    "Description": "Wrecz odwrotnie, to VLIW wykorzystuje architekture superskalarna na której opiera swój podział rozkazów na paczki.",
+    "Answer": false,
+    "Position": 82
+  },
+  {
+    "Question": "Architektura superskalarna Wykorzystuje wiele potokowych jednostek funkcjonalnych",
+    "Description": "Tak, wymagane sa co najmniej dwie jednostki potokowe, poniewaz architektura superskalarna w załozeniu moze wykonywac wiele rozkazów w jednym takcie.",
+    "Answer": true,
+    "Position": 83
+  },
+  {
+    "Question": "Architektura superskalarna Nie dopuszcza do wystapienia hazardu sterowania",
+    "Description": "Hazard sterowania jest problemem jednostek potokowych i musze one byc rozwiazane przez skoki opóznione lub tablice historii rozgałezien. Sama architektura superskalarna nie gwarantuje rozwiazania tego problemu.",
+    "Answer": false,
+    "Position": 84
+  },
+  {
+    "Question": "Architektura superskalarna Umozliwia wykonanie wielu rozkazów w jednym takcie",
+    "Description": "Jest to idea architektury superskalarnej.",
+    "Answer": true,
+    "Position": 85
+  },
+  {
+    "Question": "Architektura superskalarna Wykorzystuje model obliczen pamiec - pamiec",
+    "Description": "Ta architektura nie jest ograniczona do jednego modelu obliczen.",
+    "Answer": false,
+    "Position": 86
+  },
+  {
+    "Question": "Architektura superskalarna Jest stosowana tylko w procesorach wielordzeniowych",
+    "Description": "Architektura superskalarna to nie wielordzeniowosc! Jednostka superskalarna wykonuje wiele instrukcji jednoczesnie, ale w pojedynczym watku. Z kolei procesor wielordzeniowy potrafi wykonywac wiele watków, czyli wiele ciagów instrukcji jednoczesnie. Jednostka superskalarna moze byc rdzeniem, ale ofc nie tylko w tym typie procków jest stosowana.",
+    "Answer": false,
+    "Position": 87
+  },
+  {
+    "Question": "Przetwarzanie wielowatkowe Zapewnia lepsze wykorzystanie potoków",
+    "Description": "Tak, ma na celu minimalizacje strat cykli w trakcie realizacji watku, jakie moga powstac na wskutek: - chybionych odwołan do pamieci podrecznej; - błedów w przewidywaniu rozgałezien; - zaleznosci miedzy argumentami",
+    "Answer": true,
+    "Position": 88
+  },
+  {
+    "Question": "Przetwarzanie wielowatkowe Minimalizuje straty wynikajace z chybionych odwołan do pamieci podrecznej",
+    "Description": "Tak, brak uzasadnienia.",
+    "Answer": true,
+    "Position": 89
+  },
+  {
+    "Question": "Przetwarzanie wielowatkowe Wymaga zwielokrotnienia zasobów procesora (rejestry, liczniki rozkazów, itp.)",
+    "Description": "Niestety tak, jest to warunek sprzetowej realizacji wielowatkowosci.",
+    "Answer": true,
+    "Position": 90
+  },
+  {
+    "Question": "Przetwarzanie wielowatkowe Nie moze byc stosowane w przypadku hazardu danych",
+    "Description": "Nie, hazard danych wynika z zaleznosci miedzy argumentami, które sa naturalnym ryzykiem przy stosowaniu mechanizmu potokowego. Nie powinny byc blokowane z tego powodu, tym bardziej,",
+    "Answer": false,
+    "Position": 91
+  },
+  {
+    "Question": "Pojecie równoległosci na poziomie rozkazów Dotyczy architektury MIMD",
+    "Description": "Nie, ten rodzaj równoległosci dotyczy mechanizmów potokowych (CISC i RISC), architektury superskalarnej oraz VLIW.",
+    "Answer": false,
+    "Position": 92
+  },
+  {
+    "Question": "Pojecie równoległosci na poziomie rozkazów Odnosi sie m.in. do przetwarzania potokowego",
+    "Description": "Tak, idea mechanizmu potoków jest zrównoleglenie rozkazów i mozliwosc wykonywania wielu z nich w tej samej chwili czasu.",
+    "Answer": true,
+    "Position": 93
+  },
+  {
+    "Question": "Pojecie równoległosci na poziomie rozkazów Dotyczy architektury MPP",
+    "Description": "Nie, brak uzasadnienia.",
+    "Answer": false,
+    "Position": 94
+  },
+  {
+    "Question": "Pojecie równoległosci na poziomie rozkazów Dotyczy m.in. architektury superskalarnej",
+    "Description": "Tak, brak uzasadnienia.",
+    "Answer": true,
+    "Position": 95
+  },
+  {
+    "Question": "Efektywne wykorzystanie równoległosci na poziomie danych umozliwiaja Komputery wektorowe",
+    "Description": "Ogółem zastosowanie tej równoległosci jest mozliwe gdy mamy do czynienia z wieloma danymi, które moga byc przetwarzane w tym samym czasie. A grafika, wektory, macierze itp. do takich naleza.",
+    "Answer": true,
+    "Position": 96
+  },
+  {
+    "Question": "Efektywne wykorzystanie równoległosci na poziomie danych umozliwiaja Komputery macierzowe",
+    "Description": "Ogółem zastosowanie tej równoległosci jest mozliwe gdy mamy do czynienia z wieloma danymi, które moga byc przetwarzane w tym samym czasie. A grafika, wektory, macierze itp. do takich naleza.",
+    "Answer": true,
+    "Position": 97
+  },
+  {
+    "Question": "Efektywne wykorzystanie równoległosci na poziomie danych umozliwiaja Klastry",
+    "Description": "Ogółem zastosowanie tej równoległosci jest mozliwe gdy mamy do czynienia z wieloma danymi, które moga byc przetwarzane w tym samym czasie. A grafika, wektory, macierze itp. do takich naleza.",
+    "Answer": true,
+    "Position": 98
+  },
+  {
+    "Question": "Efektywne wykorzystanie równoległosci na poziomie danych umozliwiaja Procesory graficzne",
+    "Description": "Ogółem zastosowanie tej równoległosci jest mozliwe gdy mamy do czynienia z wieloma danymi, które moga byc przetwarzane w tym samym czasie. A grafika, wektory, macierze itp. do takich naleza.",
+    "Answer": true,
+    "Position": 99
+  },
+  {
+    "Question": "Efektywne wykorzystanie równoległosci na poziomie danych umozliwiaja Rozszerzenia SIMD procesorów superskalarnych",
+    "Description": "Ogółem zastosowanie tej równoległosci jest mozliwe gdy mamy do czynienia z wieloma danymi, które moga byc przetwarzane w tym samym czasie. A grafika, wektory, macierze itp. do takich naleza.",
+    "Answer": true,
+    "Position": 100
+  },
+  {
+    "Question": "Wielowatkowosc współbiezna w procesorze wielopotokowym zapewnia Mozliwosc wprowadzenia rozkazów róznych watków do wielu potoków",
+    "Description": "Tak, jest to charakterystyczna cecha tego typu wielowatkowosci. Z kolei wielowatkowosci grubo- i drobnoziarniste umozliwiaja wprowadzenie do wielu potoków wyłacznie jednego watku (w jednym takcie!)",
+    "Answer": true,
+    "Position": 101
+  },
+  {
+    "Question": "Wielowatkowosc współbiezna w procesorze wielopotokowym zapewnia Realizacje kazdego z watków do momentu wstrzymania któregos rozkazu z danego watku",
+    "Description": "Tak, watek jest realizowany do momentu wstrzymania rozkazu. Te sama ceche posiada wielowatkowosc gruboziarnista. Z kolei wielowatkowosc drobnoziarnista w kolejnych taktach realizuje naprzemiennie rozkazy kolejnych watków.",
+    "Answer": true,
+    "Position": 102
+  },
+  {
+    "Question": "Wielowatkowosc współbiezna w procesorze wielopotokowym zapewnia Przełaczanie watków co takt",
+    "Description": "Nie, to umozliwia tylko wielowatkowosc drobnoziarnista.",
+    "Answer": false,
+    "Position": 103
+  },
+  {
+    "Question": "Wielowatkowosc współbiezna w procesorze wielopotokowym zapewnia Automatyczne przemianowanie rejestrów",
+    "Description": "Głowy nie dam, ale chyba zadna wielowatkowosc nie zapewnia automatycznego przemianowania.",
+    "Answer": false,
+    "Position": 104
+  },
+  {
+    "Question": "Metoda przemianowania rejestrów jest stosowana w celu eliminacji Błednego przewidywania rozgałezien",
+    "Description": "Nie, do tego słuzy m.in. tablica historii rozgałezien.",
+    "Answer": false,
+    "Position": 105
+  },
+  {
+    "Question": "Metoda przemianowania rejestrów jest stosowana w celu eliminacji Chybionego odwołania do pamieci podrecznej",
+    "Description": "Nie, to jest problem architektury VLIW i eliminuje sie do przez przesuniecie rozkazów LOAD jak najwyzej, tak aby zminimalizowac czas ewentualnego oczekiwania",
+    "Answer": false,
+    "Position": 106
+  },
+  {
+    "Question": "Metoda przemianowania rejestrów jest stosowana w celu eliminacji Prawdziwej zaleznosci danych",
+    "Description": "Nie, od tego jest metoda wyprzedzajacego pobierania argumentu.",
+    "Answer": false,
+    "Position": 107
+  },
+  {
+    "Question": "Metoda przemianowania rejestrów jest stosowana w celu eliminacji Zaleznosci wyjsciowej miedzy rozkazami.",
+    "Description": "Tak, ta metoda eliminuje powyzszy i ponizszy problem. Polega na dynamicznym przypisywaniu rejestrów do rozkazów.",
+    "Answer": true,
+    "Position": 108
+  },
+  {
+    "Question": "Metoda przemianowania rejestrów jest stosowana w celu eliminacji Antyzaleznosci",
+    "Description": "Tak, brak uzasadnienia.",
+    "Answer": true,
+    "Position": 109
+  },
+  {
+    "Question": "Wyprzedzajace pobranie argumentu pozwala rozwiazac konflikt wynikajacy z Zaleznosci wyjsciowej miedzy rozkazami",
+    "Description": "Te zaleznosc musi kontrolowac układ sterujacy.",
+    "Answer": false,
+    "Position": 110
+  },
+  {
+    "Question": "Wyprzedzajace pobranie argumentu pozwala rozwiazac konflikt wynikajacy z Prawdziwej zaleznosci danych",
+    "Description": "Tak, do tego słuzy, patrz: prawdziwa zaleznosc danych",
+    "Answer": true,
+    "Position": 111
+  },
+  {
+    "Question": "Wyprzedzajace pobranie argumentu pozwala rozwiazac konflikt wynikajacy z Błednego przewidywania rozgałezien",
+    "Description": "Nie powoduje konfliktów, nalezy je tylko obsłuzyc i ograniczyc liczbe wystepowan.",
+    "Answer": false,
+    "Position": 112
+  },
+  {
+    "Question": "Wyprzedzajace pobranie argumentu pozwala rozwiazac konflikt wynikajacy z Antyzaleznosci miedzy rozkazami",
+    "Description": "Rozkazowi, który odczytuje jakas zmienna, od razu jest podrzucana jej zmieniona wartosc. zamiast przechodzic przez rejestr posredni (zapis i ponowny odczyt).",
+    "Answer": true,
+    "Position": 113
+  },
+  {
+    "Question": "Przepustowosc (moc obliczeniowa) duzych komputerów jest podawana w GFLOPS",
+    "Description": "To jest do zapamietania na prostu - takie sa standardy",
+    "Answer": true,
+    "Position": 114
+  },
+  {
+    "Question": "Przepustowosc (moc obliczeniowa) duzych komputerów jest podawana w Liczbie instrukcji wykonywanych na sekunde",
+    "Description": "To jest do zapamietania na prostu - takie sa standardy",
+    "Answer": false,
+    "Position": 115
+  },
+  {
+    "Question": "Przepustowosc (moc obliczeniowa) duzych komputerów jest podawana w Liczbie operacji zmiennoprzecinkowych na sekunde",
+    "Description": "To jest do zapamietania na prostu - takie sa standardy",
+    "Answer": true,
+    "Position": 116
+  },
+  {
+    "Question": "Przepustowosc (moc obliczeniowa) duzych komputerów jest podawana w Mb/sek",
+    "Description": "To jest do zapamietania na prostu - takie sa standardy",
+    "Answer": false,
+    "Position": 117
+  },
+  {
+    "Question": "Podstawa klasyfikacji Flynna jest Liczba jednostek przetwarzajacych i sterujacych w systemach komputerowych",
+    "Description": "Kryterium klasyfikacji Flynna jest liczba strumieni rozkazów oraz liczba strumieni danych w systemie komputerowym. NIC WIECEJ, NIC MNIEJ.",
+    "Answer": false,
+    "Position": 118
+  },
+  {
+    "Question": "Podstawa klasyfikacji Flynna jest Protokół dostepu do pamieci operacyjnej",
+    "Description": "Kryterium klasyfikacji Flynna jest liczba strumieni rozkazów oraz liczba strumieni danych w systemie komputerowym. NIC WIECEJ, NIC MNIEJ.",
+    "Answer": false,
+    "Position": 119
+  },
+  {
+    "Question": "Podstawa klasyfikacji Flynna jest Liczba modułów pamieci operacyjnej w systemach komputerowych",
+    "Description": "Kryterium klasyfikacji Flynna jest liczba strumieni rozkazów oraz liczba strumieni danych w systemie komputerowym. NIC WIECEJ, NIC MNIEJ.",
+    "Answer": false,
+    "Position": 120
+  },
+  {
+    "Question": "Podstawa klasyfikacji Flynna jest Sposób połaczenia jednostek przetwarzajacych z modułami pamieci operacyjnej.",
+    "Description": "Kryterium klasyfikacji Flynna jest liczba strumieni rozkazów oraz liczba strumieni danych w systemie komputerowym. NIC WIECEJ, NIC MNIEJ.",
+    "Answer": false,
+    "Position": 121
+  },
+  {
+    "Question": "Podstawa klasyfikacji Flynna jest Liczba strumieni rozkazów i danych w systemach komputerowych",
+    "Description": "Kryterium klasyfikacji Flynna jest liczba strumieni rozkazów oraz liczba strumieni danych w systemie komputerowym. NIC WIECEJ, NIC MNIEJ.",
+    "Answer": true,
+    "Position": 122
+  },
+  {
+    "Question": "Model SIMD Był wykorzystywany tylko w procesorach macierzowych",
+    "Description": "Nie, o niego oparte sa równiez m.in. procesory wektorowe, GPU, technologie MMX oraz SSE. Nie, był równiez wykorzystywany w komputerach wektorowych, rozszerzeniach SIMD oraz GPU.",
+    "Answer": false,
+    "Position": 123
+  },
+  {
+    "Question": "Model SIMD Jest wykorzystywany w multimedialnych rozszerzeniach współczesnych procesorów",
+    "Description": "Tak, multimedialne rozszerzenie słuza do działania na wielu rejestrach jednoczesnie, co umozliwiaja m.in. technologie MMX i SSE.",
+    "Answer": true,
+    "Position": 124
+  },
+  {
+    "Question": "Model SIMD Jest wykorzystywany w heterogenicznej architekturze PowerXCell",
+    "Description": "Tak jest https: // en. wikipedia. org/ wiki/ Cell_ ( microprocessor)",
+    "Answer": true,
+    "Position": 125
+  },
+  {
+    "Question": "Model SIMD Zapewnia wykonanie tej samej operacji na wektorach argumentów",
+    "Description": "Znaczenie: Single Instruction Multiple Device. Wykonuje jedna instrukcje na wielu urzadzeniach.",
+    "Answer": true,
+    "Position": 126
+  },
+  {
+    "Question": "Model SIMD Jest podstawa rozkazów wektorowych",
+    "Description": "Pod ten model sa zaprojektowane rozkazy wektorowe - jedno instrukcja, wiele urzadzen.",
+    "Answer": true,
+    "Position": 127
+  },
+  {
+    "Question": "Model SIMD Jest podstawa architektury procesorów superskalarnych",
+    "Description": "Nie, jest wykorzystywany w rozszerzeniach wektorowych, ale nie jest podstawa.",
+    "Answer": false,
+    "Position": 128
+  },
+  {
+    "Question": "Komputery wektorowe Posiadaja jednostki potokowe o budowie wektorowej",
+    "Description": "Nie, posiadaja potokowe jednostki arytmetyczne, które nie sa wektorowe.",
+    "Answer": false,
+    "Position": 129
+  },
+  {
+    "Question": "Komputery wektorowe Posiadaja w liscie rozkazów m.in. rozkazy operujace na wektorach danych",
+    "Description": "Jak najbardziej, nie mogłyby sie bez tego obejsc.",
+    "Answer": true,
+    "Position": 130
+  },
+  {
+    "Question": "Komputery wektorowe Wykorzystuja od kilku do kilkunastu potokowych jednostek arytmetycznych",
+    "Description": "Tak, tych jednostek moze byc wiele, mozna to zauwazyc na przykładzie komputera Cray-1 (wykład 7-8, slajd 31)",
+    "Answer": true,
+    "Position": 131
+  },
+  {
+    "Question": "Komputery wektorowe Posiadaja liste rozkazów operujacych wyłacznie na wektorach",
+    "Description": "Zdecydowanie nie. Owszem, te komputery posiadaja rejestry wektorowe i wektorowe jednostki zmiennoprzecinkowe, ale nie jest to wszystko. Maja równiez normalne rejestry, adresacje, jednostki skalarne i mozliwosc wykonywania na nich operacji.",
+    "Answer": false,
+    "Position": 132
+  },
+  {
+    "Question": "Moc obliczeniowa komputerów wektorowych Zalezy od liczby stopni potoku.",
+    "Description": "Moc obliczeniowa nie jest zalezna od liczby stopni potoku. Ta jedynie wpływa na ilosc rozkazów jakie moga byc wykonane w chwili czasu w jednostce potokowej.",
+    "Answer": false,
+    "Position": 133
+  },
+  {
+    "Question": "Moc obliczeniowa komputerów wektorowych Jest odwrotnie proporcjonalna do długosci taktu zegarowego",
+    "Description": "Tak, bez uzasadnienia.",
+    "Answer": true,
+    "Position": 134
+  },
+  {
+    "Question": "Moc obliczeniowa komputerów wektorowych Jest wprost proporcjonalna do długosci taktu zegarowego",
+    "Description": "Nie,  bez uzasadnienia.",
+    "Answer": false,
+    "Position": 135
+  },
+  {
+    "Question": "Moc obliczeniowa komputerów wektorowych Zalezy odwrotnie proporcjonalnie od liczby jednostek potokowych połaczonych łancuchowo.",
+    "Description": "Nie, idea operacji wektorowej na komputerze wektorowym zakłada jedna jednostke potokowa. Ich zwiekszenie nie powinno wpłynac bezposrednio na moc.",
+    "Answer": false,
+    "Position": 136
+  },
+  {
+    "Question": "Moc obliczeniowa komputerów wektorowych Zmierza asymptotycznie do wartosci maksymalnej wraz ze wzrostem długosci wektora",
+    "Description": "Tak, istnieje pewna wartosc maksymalna do której moc dazy logarytmicznie wraz ze wzrostem długosci wektora.",
+    "Answer": true,
+    "Position": 137
+  },
+  {
+    "Question": "Moc obliczeniowa komputerów wektorowych Nie zalezy od długosci wektora",
+    "Description": "Nie, bez uzasadnienia.",
+    "Answer": false,
+    "Position": 138
+  },
+  {
+    "Question": "Moc obliczeniowa komputerów wektorowych Zalezy liniowo od długosci wektora",
+    "Description": "Nie, bez uzasadnienia.",
+    "Answer": false,
+    "Position": 139
+  },
+  {
+    "Question": "Procesory wektorowe Moga byc stosowane w systemach wieloprocesorowych",
+    "Description": "Domyslnie procesory wektorowe moga pracowac pojedynczo, ale moga byc czescia takiego systemu. Poza tym nie znalazłem nic, co by temu przeczyło. Jest tez np. CUDA - architektura wielordzeniowych procesorów graficznych. Sama architektura SIMD działa na wielu procesorach.",
+    "Answer": true,
+    "Position": 140
+  },
+  {
+    "Question": "Procesory wektorowe Maja liste rozkazów operujaca jedynie na wektorach",
+    "Description": "Nie, posiadaja tez m.in. potokowe jednostki arytmetyczne oraz jednostki skalarne, do operowania na zwykłych liczbach.",
+    "Answer": false,
+    "Position": 141
+  },
+  {
+    "Question": "Procesory wektorowe Maja moc kilka razy wieksza od procesorów skalarnych",
+    "Description": "Tak, przyspieszenie jest ilorazem czasu wykonywania na procesorze niewektorowym do czasu wykonywania na procesorze wektorowym.",
+    "Answer": true,
+    "Position": 142
+  },
+  {
+    "Question": "Komputery macierzowe Maja w liscie rozkazów m.in. rozkazy operujace na wektorach danych",
+    "Description": "Tak, te komputery sa rozwinieciem komputerów wektorowych i musza miec rozkazy wektorowe. Komputery macierzowe posiadaja po n jednostek przetwarzajacych, które potrafia razem obliczyc n składowych wektora.",
+    "Answer": true,
+    "Position": 143
+  },
+  {
+    "Question": "Komputery macierzowe Maja macierzowe potokowe układy arytmetyczne",
+    "Description": "Nie, posiadaja natomiast jednostki przetwarzajace. Z kolei potokowa jednostke arytmetyczna posiadaja komputery wektorowe.",
+    "Answer": false,
+    "Position": 144
+  },
+  {
+    "Question": "Komputery macierzowe Maja w typowych rozwiazaniach zestaw pełnych procesów połaczonych siecia połaczen",
+    "Description": "Nie, w typowym rozwiazaniu jest jeden pełny procesor z wieloma jednostkami potokowymi, które sa połaczone siecia łaczaca (statyczna lub dynamiczna). Siec połaczen pełnych procków posiadaja superkomputery z top500 (Nie jestem pewien tej odpowiedzi).",
+    "Answer": false,
+    "Position": 145
+  },
+  {
+    "Question": "Komputery macierzowe Wykonuja synchroniczna operacje wektorowa w sieci elementów przetwarzajacych",
+    "Description": "Tak własnie działaja.",
+    "Answer": true,
+    "Position": 146
+  },
+  {
+    "Question": "Rozkazy wektorowe moga byc realizowane przy wykorzystaniu Macierzy elementów przetwarzajacych",
+    "Description": "Tak, komputery macierzowe operuja na rozkazach wektorowych.",
+    "Answer": true,
+    "Position": 147
+  },
+  {
+    "Question": "Rozkazy wektorowe moga byc realizowane przy wykorzystaniu Zestawu procesorów superskalarnych",
+    "Description": "Procesory superskalarne w załozeniu nie posiadaja rozkazów wektorowych.",
+    "Answer": false,
+    "Position": 148
+  },
+  {
+    "Question": "Rozkazy wektorowe moga byc realizowane przy wykorzystaniu Technologii MMX",
+    "Description": "Tak, jest to pochodna technologia modelu SIMD, wykonuje operacje na krótkich wektorach (64-bit)",
+    "Answer": true,
+    "Position": 149
+  },
+  {
+    "Question": "Rozkazy wektorowe moga byc realizowane przy wykorzystaniu Sieci połaczen typu krata",
+    "Description": "Jest to siec połaczen, która łaczy jednostki przetwarzajace w komputerze macierzowym. Raczej na wektorach na czesc komputera nie działa.",
+    "Answer": false,
+    "Position": 150
+  },
+  {
+    "Question": "Rozkazy wektorowe moga byc realizowane przy wykorzystaniu Potokowych jednostek arytmetycznych",
+    "Description": "Tak, takie znajduja sie w komputerach wektorowych.",
+    "Answer": true,
+    "Position": 151
+  },
+  {
+    "Question": "Rozkazy wektorowe Nie moga byc wykonywane bez uzycia potokowych jednostek arytmetycznych",
+    "Description": "Moga. Komputery macierzowe ich nie posiadaja i wykonuja rozkazy wektorowe sprawnie.",
+    "Answer": false,
+    "Position": 152
+  },
+  {
+    "Question": "Rozkazy wektorowe Sa charakterystyczne dla architektury SIMD",
+    "Description": "Tak, z niej sie zrodziły, tak samo jak m.in. technologie MMX i SSE.",
+    "Answer": true,
+    "Position": 153
+  },
+  {
+    "Question": "Rozkazy wektorowe Sa rozkazami dwuargumentowymi i w wyniku zawsze daja wektor",
+    "Description": "Nie, moga operowac na 1 argumencie na przykład. Rozkaz moze byc tez 3 argumentowy, jak rozkaz dodawania VADD. Pierwszym argumentem jest rejestr docelowy, zawartosc pozostałych dwóch jest dodana.",
+    "Answer": false,
+    "Position": 154
+  },
+  {
+    "Question": "Rozkazy wektorowe W komputerach wektorowych ich czas wykonania jest wprost proporcjonalny do długosci wektora",
+    "Description": "Tak, na przykładzie rozkazu dodawania wektorów widac, ze czas rosnie równomiernie wraz z iloscia elementów wektora.",
+    "Answer": true,
+    "Position": 155
+  },
+  {
+    "Question": "Rozkazy wektorowe W komputerach wektorowych ich czas wykonania jest liniowo zalezny od długosci wektora",
+    "Description": "Tak, patrz wzór wyzej. Wyraznie widac, ze wraz ze wzrostem długosci wektora, rozkaz dodawania wykonuje sie dłuzej o stała wartosc. Z kolei przepustowosc (liczba operacji zmiennoprzecinkowych na sekunde) rosnie logarytmicznie wraz z długoscia wektora.",
+    "Answer": false,
+    "Position": 156
+  },
+  {
+    "Question": "Rozkazy wektorowe W komputerach macierzowych ich czas wykonania jest wprost proporcjonalny do liczby elementów przetwarzajacych",
+    "Description": "Przy odpowiedniej liczbie jednostek przetwarzajacych jest stały",
+    "Answer": false,
+    "Position": 157
+  },
+  {
+    "Question": "Rozkazy wektorowe Moga byc wykonane na sieci elementów przetwarzajacych.",
+    "Description": "Czyli na komputerze macierzowym - owszem.",
+    "Answer": true,
+    "Position": 158
+  },
+  {
+    "Question": "Architektura CUDA Umozliwia bardzo wydajne wykonywanie operacji graficznych",
+    "Description": "Tak, ta architektura jest rozwinieciem mechanizmów wektorowych oraz macierzowych i jest przeznaczona specjalnie dla przetwarzania grafiki.",
+    "Answer": true,
+    "Position": 159
+  },
+  {
+    "Question": "Architektura CUDA Stanowi uniwersalna architekture obliczeniowa połaczona z równoległym modelem programistycznym",
+    "Description": "Tak, pomimo specjalizacji graficznej, architektura ta jest uniwersalna i zdolna do wszystkiego. Procesory posiadaja uniwersalne programy obliczeniowe, a CUDA posiada model programistyczny (oraz podział programu na 5 faz). Składa sie on z: - Kompilatora NVCC; - Podział programu na kod wykonywany przez procesor (host code) oraz karte graficzna (kernel); - Realizacja obliczen równoległych wg modelu SIMT (Single Instruction Multiple Threading)",
+    "Answer": true,
+    "Position": 160
+  },
+  {
+    "Question": "Architektura CUDA Realizuje model obliczeniowy SIMT",
+    "Description": "Tak, patrz wyzej. Działanie: wiele niezaleznych watków wykonuje te sama operacje. Architektura posiada równiez mechanizm synchronizacji watków ( barrir synchronization) dla komunikacji oraz współdzielona pamiec.",
+    "Answer": true,
+    "Position": 161
+  },
+  {
+    "Question": "Architektura CUDA Jest podstawa budowy samodzielnych, bardzo wydajnych komputerów",
+    "Description": "Komputery CUDA nie sa ogólnego zastosowania, tylko do ogólnych problemów numerycznych.",
+    "Answer": false,
+    "Position": 162
+  },
+  {
+    "Question": "Systemy SMP Wykorzystuja protokół MESI do sterowania dostepem do wspólnej magistrali",
+    "Description": "Ten protokół wykorzystuja systemy UMA (podkategoria systemów SMP) ze wspólna magistrala w celu zapewnienia spójnosci pamieci podrecznych ( snooping). Moga tez uzywac katalogów, ale podkategoria NUMA wykorzystuje wyłacznie katalogi.",
+    "Answer": false,
+    "Position": 163
+  },
+  {
+    "Question": "Systemy SMP Posiadaja skalowalne procesory",
+    "Description": "SMP nalezy do systemów wieloprocesorowych, ale te nie musza byc skalowalne.",
+    "Answer": false,
+    "Position": 164
+  },
+  {
+    "Question": "Systemy SMP Posiadaja pamiec fizycznie rozproszona, ale logicznie wspólna",
+    "Description": "Nie, pamiec jest fizycznie wspólna. Fizycznie rozproszona pamiec posiadaja systemy MPP.",
+    "Answer": false,
+    "Position": 165
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z jednorodnym dostepem do pamieci (UMA) Zapewniaja spójnosc pamieci podrecznych wszystkich procesorów",
+    "Description": "Czuwa nad tym protokół MESI, kazdy uaktualnia stan pamieci w kazdym z procesorów.",
+    "Answer": true,
+    "Position": 166
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z jednorodnym dostepem do pamieci (UMA) Maja niska skalowalnosc",
+    "Description": "Maja wrecz chujowa skalowalnosc, poniewaz przewaznie sa połaczone takimi konstrukcjami jak przełacznica krzyzowa czy wspólna magistrala, a sam mechanizm snoopingu jest kiepsko skalowalny.",
+    "Answer": true,
+    "Position": 167
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z jednorodnym dostepem do pamieci (UMA) Wykorzystuja katalog do utrzymania spójnosci pamieci.",
+    "Description": "Tak, wg wykładów Kozielskiego UMA moze wykorzystywac do kontroli pamieci spójnej zarówno katalog, jak i protokół MESI.",
+    "Answer": true,
+    "Position": 168
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z jednorodnym dostepem do pamieci (UMA) Wykorzystuja przesył komunikatów miedzy procesorami.",
+    "Description": "To cecha MPP oraz klastrów.",
+    "Answer": false,
+    "Position": 169
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z jednorodnym dostepem do pamieci (UMA) Umozliwiaja dostep do pamieci najczesciej poprzez wspólna magistrale lub przełacznice krzyzowa.",
+    "Description": "Sa to jednego z mozliwych konfiguracji UMA, sa to najprostsze i najtansze rozwiazania, wiec prawdopodobnie tez najczesciej stosowane (ale równiez najmniej skalowalne).",
+    "Answer": true,
+    "Position": 170
+  },
+  {
+    "Question": "Protokół MESI Jest wykorzystywany do sterowania dostepem do magistrali w systemie SMP",
+    "Description": "Protokół MESI wykorzystywany jest do zapewniania spójnosci pamieci podrecznych cache w architekturze SMP ( snooping), a dokładniej w UMA. NUMA korzysta tylko z katalogów.",
+    "Answer": false,
+    "Position": 171
+  },
+  {
+    "Question": "Protokół MESI Zapewnia spójnosc pamieci cache w systemie SMP",
+    "Description": "Do tego własnie słuzy.",
+    "Answer": true,
+    "Position": 172
+  },
+  {
+    "Question": "Protokół MESI Słuzy do wymiany komunikatów w systemie MPP",
+    "Description": "Protokół MESI wykorzystywany jest do zapewniania spójnosci pamieci podrecznych cache w architekturze SMP ( snooping), a dokładniej w UMA. NUMA korzysta tylko z katalogów.",
+    "Answer": false,
+    "Position": 173
+  },
+  {
+    "Question": "Protokół MESI Chroni przed hazardem w procesorach superskalarnych",
+    "Description": "Protokół MESI wykorzystywany jest do zapewniania spójnosci pamieci podrecznych cache w architekturze SMP ( snooping), a dokładniej w UMA. NUMA korzysta tylko z katalogów.",
+    "Answer": false,
+    "Position": 174
+  },
+  {
+    "Question": "W architekturze NUMA Dane sa wymieniane miedzy wezłami w postaci linii pamieci podrecznej (PaP)",
+    "Description": "Tak, kazdy procesor / wezeł posiada swoja własna szybka pamiec podreczna. Pamiec ta jest publiczna - inne procesory maja do niej dostep, ale wymiana informacji na linii moja pamiec - inny procesor jest znacznie wolniejsza niz procesor - jego pamiec.",
+    "Answer": true,
+    "Position": 175
+  },
+  {
+    "Question": "W architekturze NUMA Spójnosc PaP wezłów jest utrzymywana za pomoca protokołu MESI",
+    "Description": "Protokół MESI jest wykorzystywany w architekturze UMA do snoopingu - zapewnienia spójnosci pamieci podrecznych procków.",
+    "Answer": false,
+    "Position": 176
+  },
+  {
+    "Question": "W architekturze NUMA Czas dostepu do pamieci lokalnej w wezle jest podobny do czasu dostepu do pamieci nielokalnej",
+    "Description": "Odwołanie do nielokalnej pamieci sa znacznie wolniejsze niz do lokalnej, ok. 10-krotnie bardziej. Dotyczy to głównie architektury NC-NUMA, patrz: rodzaje systemów NUMA 12.1",
+    "Answer": false,
+    "Position": 177
+  },
+  {
+    "Question": "W architekturze NUMA Czas zapisu danych do pamieci nielokalnej moze byc znacznie dłuzszy od czasu odczytu z tej pamieci",
+    "Description": "Bez uzasadnienia.",
+    "Answer": true,
+    "Position": 178
+  },
+  {
+    "Question": "W architekturze NUMA Kazdy procesor ma dostep do pamieci operacyjnej kazdego wezła",
+    "Description": "Bez uzasadnienia.",
+    "Answer": true,
+    "Position": 179
+  },
+  {
+    "Question": "W architekturze NUMA Procesy komunikuja sie poprzez przesył komunikatów",
+    "Description": "Przesył komunikatów wystepuje w systemach MPP, gdzie pamiec jest rozproszona fizycznie i logicznie. W NUMA jest fizycznie rozproszona miedzy wezłami (do przesyłu informacji wykorzystywana jest siec łaczaca wezły), ale stanowi logicznie jedna całosc.",
+    "Answer": false,
+    "Position": 180
+  },
+  {
+    "Question": "W architekturze NUMA Pamiec operacyjna jest rozproszona fizycznie pomiedzy wezłami, ale wspólna logicznie",
+    "Description": "Bez uzasadnienia.",
+    "Answer": true,
+    "Position": 181
+  },
+  {
+    "Question": "W architekturze CC-NUMA Kazdy procesor ma dostep do pamieci operacyjnej kazdego wezła",
+    "Description": "Tak, poniewaz architektura NUMA opiera sie o niejednorodny dostep do pamieci - kazdy procesor ma pełny dostep do pamieci lokalnej oraz nielokalnej, czyli pamieci podrecznych wszystkich innych procesorów.",
+    "Answer": true,
+    "Position": 182
+  },
+  {
+    "Question": "W architekturze CC-NUMA Spójnosc pamieci pomiedzy wezłami jest utrzymywana za pomoca protokołu MESI",
+    "Description": "Nie, nie jest potrzebna spójnosc pamieci, poniewaz kazdy procesor odczytuje potrzebne mu zmienne itp. posrednio przez katalog.",
+    "Answer": false,
+    "Position": 183
+  },
+  {
+    "Question": "W architekturze CC-NUMA Dane sa wymieniane miedzy wezłami w postaci linii pamieci podrecznej",
+    "Description": "Kazda linia posiada pewna liczbe bajtów, które inne procesory moga pobierac. Mozliwe, ze i katalogi korzystaja z wymiany danych poprzez linie.",
+    "Answer": true,
+    "Position": 184
+  },
+  {
+    "Question": "W architekturze CC-NUMA Pamiec operacyjna jest fizycznie rozproszona pomiedzy wezłami, ale wspólna logicznie",
+    "Description": "Dokładnie tak.",
+    "Answer": true,
+    "Position": 185
+  },
+  {
+    "Question": "W systemach wieloprocesorowych o architekturze CC-NUMA Spójnosc pamieci wszystkich wezłów jest utrzymywana za pomoca katalogu",
+    "Description": "Tak, w NUMA do zachowania spójnosci danych mozna stosowac wyłacznie katalogi (a np. protokołu MESI nie).",
+    "Answer": true,
+    "Position": 186
+  },
+  {
+    "Question": "W systemach wieloprocesorowych o architekturze CC-NUMA Pamiec operacyjna jest rozproszona fizycznie pomiedzy wezłami, ale wspólna logicznie",
+    "Description": "Dokładnie tak.",
+    "Answer": true,
+    "Position": 187
+  },
+  {
+    "Question": "W systemach wieloprocesorowych o architekturze CC-NUMA Kazdy procesor ma bezposredni dostep do pamieci operacyjnej kazdego wezła",
+    "Description": "Nie, dostep jest posredni. Pamiec w CC-NUMA jest fizycznie rozproszona, wiec cos musi posredniczyc w tej wymianie danych. Słuzy do tego mechanizm katalogów i wezłów. Procesor zgłasza zapotrzebowanie na linie pamieci do katalogu i ja pózniej otrzymuje.",
+    "Answer": false,
+    "Position": 188
+  },
+  {
+    "Question": "W systemach wieloprocesorowych o architekturze CC-NUMA Dane sa wymieniane miedzy wezłami w postaci linii pamieci podrecznej",
+    "Description": "Tak, poniewaz w architekturze NUMA wymiana rekordów pamieci nastepuje z uzyciem całej linii. Np. jesli procek chce pobrac jednego floata 4-bajtowego, a linia ma 16 bajtów, to musimy pobrac cała linie (ale i tak odbywa sie to bardzo szybko).",
+    "Answer": true,
+    "Position": 189
+  },
+  {
+    "Question": "W architekturze CC-NUMA czas dostepu do pamieci operacyjnej moze zalezec od Rodzaju dostepu (odczyt - zapis)",
+    "Description": "Zapis jest znacznie wolniejszy, bo wymaga aktualizacji całej spójnej logicznie pamieci.",
+    "Answer": true,
+    "Position": 190
+  },
+  {
+    "Question": "W architekturze CC-NUMA czas dostepu do pamieci operacyjnej moze zalezec od Stanu linii (zapisanego w katalogu), do której nastepuje odwołanie",
+    "Description": "Jak linia znajduje sie juz w katalogu, to nastepuje odczyt tylko.",
+    "Answer": false,
+    "Position": 191
+  },
+  {
+    "Question": "W architekturze CC-NUMA czas dostepu do pamieci operacyjnej moze zalezec od Połozenia komórki, do której odwołuje sie rozkaz (lokalna pamiec wezła – pamiec innego wezła)",
+    "Description": "Dostep do pamieci nielokalnej (innego procka) jest znacznie dłuzszy (ok. 10-krotnie)",
+    "Answer": true,
+    "Position": 192
+  },
+  {
+    "Question": "W architekturze CC-NUMA czas dostepu do pamieci operacyjnej moze zalezec od Odległosci wezłów, zaangazowanych w wykonanie rozkazu, w strukturze sieci łaczacej",
+    "Description": "Róznice sa rzedu mikrosekund, nie jest to znaczacy czas, tylko margines błedu najwyzej.",
+    "Answer": false,
+    "Position": 193
+  },
+  {
+    "Question": "Katalog moze byc stosowany do Utrzymania spójnosci pamieci podrecznych poziomu L1 i L2 w procesorach wielordzeniowych.",
+    "Description": "Wiadomo, ze katalog jest wykorzystywany do zachowania spójnosci tego rodzaju pamieci, która jest wspólna (L2). L1 jest pamiecia prywatna rdzenia, wiec nie ma potrzebny zachowywac jej spójnosci.",
+    "Answer": false,
+    "Position": 194
+  },
+  {
+    "Question": "Katalog moze byc stosowany do Utrzymania spójnosci pamieci wszystkich wezłów w systemach CC-NUMA",
+    "Description": "Systemy NUMA wykorzystuja katalogi do zachowania spójnosci pamieci, i tylko katalogi.",
+    "Answer": true,
+    "Position": 195
+  },
+  {
+    "Question": "Katalog moze byc stosowany do Sterowania realizacja watków w architekturze CUDA",
+    "Description": "Zdecydowanie bullshit, CUDA nie wykorzystuje katalogu. W CUDA watkami steruje osobny procesor watków.",
+    "Answer": false,
+    "Position": 196
+  },
+  {
+    "Question": "Spójnosc pamieci podrecznych w procesorze wielordzeniowym moze byc m.in. zapewniona za pomoca Przełacznicy krzyzowej",
+    "Description": "Nie, to rozwiazanie sieci połaczen w architekturze UMA. Mało wydajna.",
+    "Answer": false,
+    "Position": 197
+  },
+  {
+    "Question": "Spójnosc pamieci podrecznych w procesorze wielordzeniowym moze byc m.in. zapewniona za pomoca Katalogu",
+    "Description": "To mechanizm do zachowania spójnosci jaki stosowany jest głównie w architekturze NUMA, ale UMA tez moze.",
+    "Answer": true,
+    "Position": 198
+  },
+  {
+    "Question": "Spójnosc pamieci podrecznych w procesorze wielordzeniowym moze byc m.in. zapewniona za pomoca Protokołu MESI",
+    "Description": "Tak, i tylko to do tego słuzy. Wykorzystuje do wyłacznie architektura UMA.",
+    "Answer": true,
+    "Position": 199
+  },
+  {
+    "Question": "Spójnosc pamieci podrecznych w procesorze wielordzeniowym moze byc m.in. zapewniona za pomoca Wspólnej magistrali",
+    "Description": "Nie, jest to jeden z rodzajów połaczen w architekturze UMA, ale nie ma nic wspólnego ze spójnoscia pamieci jej procków.",
+    "Answer": false,
+    "Position": 200
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z pamiecia wspólna Zapewniaja jednorodny dostep do pamieci",
+    "Description": "Nie, bo NUMA nie zapewnia. Jednorodny dostep wystepuje wtedy, gdy procesor ma dostep wyłacznie do swojej pamieci podrecznej. Niejednorodny wtedy, gdy ma dostep równiez do pamieci nielokalnej (pamieci podrecznej innych procesorów.)",
+    "Answer": false,
+    "Position": 201
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z pamiecia wspólna Moga wykorzystywac procesory CISC",
+    "Description": "Nie ma takiego ograniczenia.",
+    "Answer": true,
+    "Position": 202
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z pamiecia wspólna Sa wykorzystywane w klastrach",
+    "Description": "Tak, wezły w postaci serwerów SMP.",
+    "Answer": true,
+    "Position": 203
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z pamiecia wspólna Wykorzystuja przesył komunikatów miedzy procesorami",
+    "Description": "Nie, wykorzystuja protokół MESI do snoopingu oraz katalogi w celu zapewnienia spójnosci pamieci podrecznej.",
+    "Answer": false,
+    "Position": 204
+  },
+  {
+    "Question": "Systemy wieloprocesorowe z pamiecia wspólna Wykorzystuja katalog do utrzymania spójnosci pamieci podrecznych",
+    "Description": "Bez uzasadnienia.",
+    "Answer": true,
+    "Position": 205
+  },
+  {
+    "Question": "W systemach wieloprocesorowych katalog słuzy do Sledzenia adresów w protokole MESI",
+    "Description": "Nie no kurwa, szanujmy sie, katalogi powstały po to by wyprzec protokół MESI.",
+    "Answer": false,
+    "Position": 206
+  },
+  {
+    "Question": "W systemach wieloprocesorowych katalog słuzy do Sterowania przesyłem komunikatów",
+    "Description": "Nie, w UMA i NUMA nie ma przesyłu komunikatów, to jest w MPP i klastrach.",
+    "Answer": false,
+    "Position": 207
+  },
+  {
+    "Question": "W systemach wieloprocesorowych katalog słuzy do Utrzymania spójnosci pamieci w systemach o niejednorodnym dostepie do pamieci",
+    "Description": "No tak, patrz poprzednie pytania. To jest problem z jakimi borykaja sie UMA i NUMA. Katalog mozna stosowac do jego rozwiazania w obu architekturach.",
+    "Answer": true,
+    "Position": 208
+  },
+  {
+    "Question": "W systemach wieloprocesorowych katalog słuzy do Realizacji dostepu do nielokalnych pamieci w systemach NUMA",
+    "Description": "Katalogi i wezły stanowia mechanizm do wymiany informacji miedzy prockami i ich pamieciami.",
+    "Answer": true,
+    "Position": 209
+  },
+  {
+    "Question": "Charakterystyczne cechy architektury MPP Spójnosc pamieci podrecznej wszystkich wezłów",
+    "Description": "Spójnosc wrecz nie powinna byc zapewniana, kazdy element sa swoja własna, odrebna pamiec.",
+    "Answer": false,
+    "Position": 210
+  },
+  {
+    "Question": "Charakterystyczne cechy architektury MPP Fizycznie rozproszona PaO",
+    "Description": "Tak, jest fizycznie i logicznie rozproszona.",
+    "Answer": true,
+    "Position": 211
+  },
+  {
+    "Question": "Charakterystyczne cechy architektury MPP Fizycznie rozproszona PaO, ale logicznie wspólna",
+    "Description": "Nie, taka jest cecha systemów NUMA.",
+    "Answer": false,
+    "Position": 212
+  },
+  {
+    "Question": "Charakterystyczne cechy architektury MPP Przesył komunikatów miedzy procesorami",
+    "Description": "Tak, to metoda synchronizacji wykonywania zadan.",
+    "Answer": true,
+    "Position": 213
+  },
+  {
+    "Question": "Charakterystyczne cechy architektury MPP Niska skalowalnosc",
+    "Description": "Nie, jest przeogromna.",
+    "Answer": false,
+    "Position": 214
+  },
+  {
+    "Question": "Charakterystyczne cechy architektury MPP Jednorodny dostep do pamieci wszystkich wezłów",
+    "Description": "Nie, pamiec jest rozproszona.",
+    "Answer": false,
+    "Position": 215
+  },
+  {
+    "Question": "Systemy pamiecia rozproszona (MPP) Wyrózniaja sie bardzo duza skalowalnoscia",
+    "Description": "Posiadaja ogromna skalowalnosc, tylko klastry maja lepsza.",
+    "Answer": true,
+    "Position": 216
+  },
+  {
+    "Question": "Systemy pamiecia rozproszona (MPP) Sa budowane z wezłów, którymi sa klastry",
+    "Description": "Wezłami moga byc tylko systemy UMA i NUMA oraz zwykłe pojedyncze procesory.",
+    "Answer": false,
+    "Position": 217
+  },
+  {
+    "Question": "Systemy pamiecia rozproszona (MPP) Realizuja synchronicznie jeden wspólny program",
+    "Description": "Nie musza byc synchronicznie wykonywane (sa synchronizacje, ale jeden wezeł moze realizowac szybciej pewne czesci programu)",
+    "Answer": false,
+    "Position": 218
+  },
+  {
+    "Question": "Systemy pamiecia rozproszona (MPP) Wymagaja zapewnienia spójnosci pamieci podrecznych pomiedzy wezłami",
+    "Description": "Wrecz nie powinny jej zapewniac, kazdy wezeł pracuje osobno.",
+    "Answer": false,
+    "Position": 219
+  },
+  {
+    "Question": "Systemy pamiecia rozproszona (MPP) Wymiane danych i synchronizacje procesów w wezłach realizuja poprzez przesył komunikatów.",
+    "Description": "Tak, pamiec jest logicznie rozproszona, a wezły sa fizycznie oddzielne, do komunikacji wystarcza tylko przesył komunikatów.",
+    "Answer": true,
+    "Position": 220
+  },
+  {
+    "Question": "Systemy pamiecia rozproszona (MPP) W wiekszosci przypadków wykorzystuja nietypowe, firmowe rozwiazania sieci łaczacych wezły systemu.",
+    "Description": "Nie wiem czy w wiekszosci przypadków, ale na slajdach wiekszosc jest poswiecona typowym rozwiazaniom sieciowym (hiperszescian, krata, torus, przełacznica krzyzowa), a custom network to tylko dodatek.",
+    "Answer": false,
+    "Position": 221
+  },
+  {
+    "Question": "Systemy pamiecia rozproszona (MPP) Wykorzystuja katalog do utrzymania spójnosci pamieci wezłów systemu.",
+    "Description": "Miedzy wezłami w MPP wykorzystuje sie przesył komunikatów. Katalogi sa wykorzystywane przez systemy UMA i NUMA, które moga byc wezłami w MPP. Jednak komunikacja miedzy samymi wezłami ich nie wykorzystuje.",
+    "Answer": false,
+    "Position": 222
+  },
+  {
+    "Question": "Systemy pamiecia rozproszona (MPP) W roli wezłów moga wykorzystywac systemy SMP.",
+    "Description": "Poznane podkategorie SMP, UMA i NUMA, moga byc wezłami.",
+    "Answer": true,
+    "Position": 223
+  },
+  {
+    "Question": "Systemy MPP sa zbudowane z wezłów którymi moga byc Systemy SMP",
+    "Description": "Wezłami moga byc zarówno systemy UMA, jak i NUMA. Ponadto dopuszcza sie zwykłe procesory z pamiecia operacyjna. Są to jedyne mozliwe rodzaje wezłów.",
+    "Answer": true,
+    "Position": 224
+  },
+  {
+    "Question": "Systemy MPP sa zbudowane z wezłów którymi moga byc Klastry",
+    "Description": "Wezłami moga byc zarówno systemy UMA, jak i NUMA. Ponadto dopuszcza sie zwykłe procesory z pamiecia operacyjna. Są to jedyne mozliwe rodzaje wezłów.",
+    "Answer": false,
+    "Position": 225
+  },
+  {
+    "Question": "Systemy MPP sa zbudowane z wezłów którymi moga byc Konstelacje",
+    "Description": "Wezłami moga byc zarówno systemy UMA, jak i NUMA. Ponadto dopuszcza sie zwykłe procesory z pamiecia operacyjna. Są to jedyne mozliwe rodzaje wezłów.",
+    "Answer": false,
+    "Position": 226
+  },
+  {
+    "Question": "Systemy MPP sa zbudowane z wezłów którymi moga byc Systemy NUMA",
+    "Description": "Wezłami moga byc zarówno systemy UMA, jak i NUMA. Ponadto dopuszcza sie zwykłe procesory z pamiecia operacyjna. Są to jedyne mozliwe rodzaje wezłów.",
+    "Answer": true,
+    "Position": 227
+  },
+  {
+    "Question": "Systemy MPP sa zbudowane z wezłów którymi moga byc Procesory",
+    "Description": "Wezłami moga byc zarówno systemy UMA, jak i NUMA. Ponadto dopuszcza sie zwykłe procesory z pamiecia operacyjna. Są to jedyne mozliwe rodzaje wezłów.",
+    "Answer": true,
+    "Position": 228
+  },
+  {
+    "Question": "Przesył komunikatów Ma miejsce w systemach MPP",
+    "Description": "Tak, w MPP oraz w klastrach.",
+    "Answer": true,
+    "Position": 229
+  },
+  {
+    "Question": "Przesył komunikatów W systemach MPP II-giej generacji angazuje wszystkie procesory na drodze przesyłu",
+    "Description": "Nie, bo w II generacji sa routery wezłów posredniczacych, które nie angazuja procesorów. W I generacji wszystkie komputery były zaangazowane, poniewaz role routera pełnił sam procesor.",
+    "Answer": false,
+    "Position": 230
+  },
+  {
+    "Question": "Przesył komunikatów Ma miejsce w klastrach",
+    "Description": "Tak, bez uzasadnienia.",
+    "Answer": true,
+    "Position": 231
+  },
+  {
+    "Question": "Cechami wyrózniajacymi klastry sa Niezaleznosc programowa kazdego wezła",
+    "Description": "Tak, bo kazdy wezeł na swój osobny system operacyjny.",
+    "Answer": true,
+    "Position": 232
+  },
+  {
+    "Question": "Cechami wyrózniajacymi klastry sa Fizycznie rozproszona, ale logicznie wspólna pamiec operacyjna",
+    "Description": "Jest fizycznie i logicznie rozproszona.",
+    "Answer": false,
+    "Position": 233
+  },
+  {
+    "Question": "Cechami wyrózniajacymi klastry sa Nieduza skalowalnosc",
+    "Description": "Kurwa, nie XD Klastry maja arcydupna skalowalnosc.",
+    "Answer": false,
+    "Position": 234
+  },
+  {
+    "Question": "Cechami wyrózniajacymi klastry sa Na ogół duza niezawodnosc",
+    "Description": "Tak, po to sie je buduje i na ogół ja maja. Redundancja wezłów, mirroring dysków, kontrola funkcjonowania wezłów. Patrz: Niezawodnosc klastrów 15.8",
+    "Answer": true,
+    "Position": 235
+  },
+  {
+    "Question": "Klastry Maja srednia skalowalnosc",
+    "Description": "Maja najwieksza skalowalnosc ze wszystkich poznanych systemów. Łatwiej go rozszerzac niz MPP, poniewaz jest jednym wielkim systemem komputerowym.",
+    "Answer": false,
+    "Position": 236
+  },
+  {
+    "Question": "Klastry Wykorzystuja model wspólnej pamieci",
+    "Description": "Nie, jest rozproszona fizycznie i logicznie.",
+    "Answer": false,
+    "Position": 237
+  },
+  {
+    "Question": "Klastry W wezłach moga wykorzystywac systemy SMP",
+    "Description": "Tak, serwery SMP sa jednymi z dopuszczalnych wezłów. Drugimi sa pełne komputery PC.",
+    "Answer": true,
+    "Position": 238
+  },
+  {
+    "Question": "Klastry Do komunikacji miedzy procesami wykorzystuja przesył komunikatów",
+    "Description": "Tak, bo jest efektownym rozwiazaniem, i tylko go wykorzystuja.",
+    "Answer": true,
+    "Position": 239
+  },
+  {
+    "Question": "Klastry Wykorzystuja przełacznice krzyzowa jako siec łaczaca wezły",
+    "Description": "Nie, ona jest wykorzystywana tylko w systemach UMA, gdzie pamiec wspólna jest fizycznie jednorodna.",
+    "Answer": false,
+    "Position": 240
+  },
+  {
+    "Question": "Klastry W kazdym wezle posiadaja pełna instalacje systemu operacyjnego",
+    "Description": "Tak, wezłem musi byc albo serwer SMP, albo PC, które musza miec swoje systemy operacyjne.",
+    "Answer": true,
+    "Position": 241
+  },
+  {
+    "Question": "Do czynników tworzacych wysoka niezawodnosc klastrów naleza Mechanizm mirroringu dysków",
+    "Description": "Tak, bo system operacyjny moze.",
+    "Answer": true,
+    "Position": 242
+  },
+  {
+    "Question": "Do czynników tworzacych wysoka niezawodnosc klastrów naleza Dostep kazdego wezła do wspólnych zasobów (pamieci zewnetrznych)",
+    "Description": "Tak, w razie czego mozna podpiac i korzystac z dodatkowej pamieci.",
+    "Answer": true,
+    "Position": 243
+  },
+  {
+    "Question": "Do czynników tworzacych wysoka niezawodnosc klastrów naleza Redundancja wezłów",
+    "Description": "No tak, jest.",
+    "Answer": true,
+    "Position": 244
+  },
+  {
+    "Question": "Do czynników tworzacych wysoka niezawodnosc klastrów naleza Mechanizm ”heartbeat”",
+    "Description": "Tak, gdy ten mechanizm przestaje odbierac ”bicie serca” jednego z wezłów, wówczas moze wywołac procedure obsługi - przeniesc zadania do innego wezła, właczyc powiadomienie itp.",
+    "Answer": true,
+    "Position": 245
+  },
+  {
+    "Question": "Do czynników tworzacych wysoka niezawodnosc klastrów naleza Zastosowanie procesorów wielordzeniowych w wezłach",
+    "Description": "Nie, nie chodzi o liczbe rdzeni, ale o to, ze kazdy wezeł jest osobnych systemem, serwerem lub pecetem.",
+    "Answer": false,
+    "Position": 246
+  },
+  {
+    "Question": "Dla sieci systemowych (SAN) sa charakterystyczne Przesył komunikatów w trybie zdalnego DMA",
+    "Description": "Tak, bo przesyłamy dane miedzy prockami, a DMA wykonuje to najszybciej.",
+    "Answer": true,
+    "Position": 247
+  },
+  {
+    "Question": "Dla sieci systemowych (SAN) sa charakterystyczne Bardzo małe czasy opóznien",
+    "Description": "Tak, rzedu pojedynczych mikrosekund.",
+    "Answer": true,
+    "Position": 248
+  },
+  {
+    "Question": "Dla sieci systemowych (SAN) sa charakterystyczne Topologia typu hiperszescian",
+    "Description": "Bullshit, siec jest taka jak topologia systemu, nie buduje sie osobnej topologii.",
+    "Answer": false,
+    "Position": 249
+  },
+  {
+    "Question": "Dla sieci systemowych (SAN) sa charakterystyczne Niska przepustowosc",
+    "Description": "Noelonie, do pamieci potrzebna jest duza przepustowosc, bo przechodzi przez nia duzo danych.",
+    "Answer": false,
+    "Position": 250
+  },
+  {
+    "Question": "Sieci systemowe (SAN) Wymagaja protokołu MESI",
+    "Description": "Sieci to tylko kabel, nie maja wymagan co do zarzadzania pamiecia XD",
+    "Answer": false,
+    "Position": 251
+  },
+  {
+    "Question": "Sieci systemowe (SAN) Wykorzystuja przełaczniki łaczone wg topologii grubego drzewa",
+    "Description": "Topologie grubego drzewa wykorzystuje np. InfiniBand, która jest siecia łaczaca w klastrach znajdujacych sie w komputerach top500.",
+    "Answer": true,
+    "Position": 252
+  },
+  {
+    "Question": "Sieci systemowe (SAN) Realizuja przesyły bloków danych bezposrednio miedzy pamieciami operacyjnymi wezłów sieci",
+    "Description": "Sieci SAN posiadaja sterowniki DMA, czyli moga przesyłac dane bezposrednio miedzy pamieciami, a same dane przesyłane sa w pakietach, czyli jakichs blokach.",
+    "Answer": true,
+    "Position": 253
+  },
+  {
+    "Question": "Sieci systemowe (SAN) Sa stosowane w klastrach",
+    "Description": "Tak, łacza wezły z systemami.",
+    "Answer": true,
+    "Position": 254
+  },
+  {
+    "Question": "Czy ponizsza lista jest rosnaco uporzadkowana według skalowalnosci Systemy scisle połaczone, systemy ze wspólna pamiecia, systemy SMP",
+    "Description": "Systemy SMP to cała kategoria systemów z pamiecia wspólna, z kolei systemy scisle połaczone i systemy ze wspólna pamiecia sa równoznaczne - sa przeciwienstwem do systemów luzno powiazanych (z pamiecia rozproszona).",
+    "Answer": false,
+    "Position": 255
+  },
+  {
+    "Question": "Czy ponizsza lista jest rosnaco uporzadkowana według skalowalnosci Systemy ze wspólna magistrala, systemy wielomagistralowe, systemy z przełacznica krzyzowa",
+    "Description": "Sa to systemy wieloprocesorowe (UMA) z pamiecia wspólna- Systemy ze wspólna magistrala - najprostsze i najmniej skalowalne - Systemy wielomagistralowe - szybsze i bardziej złozone, wciaz kiepsko skalowalne - Systemy z przełacznica krzyzowa - duza szybkosc i złozonosc obliczeniowa, trudne w rozbudowie Ogółem jest to dolna półka tych systemów.",
+    "Answer": true,
+    "Position": 256
+  },
+  {
+    "Question": "Czy ponizsza lista jest rosnaco uporzadkowana według skalowalnosci Systemy SMP, systemy z pamiecia wieloportowa, systemy z przełacznica krzyzowa",
+    "Description": "SMP to rodzaj architektury, z kolei w systemach UMA systemy z przełacznica krzyzowa sa mniej skalowalne niz systemy z pamiecia wieloportowa, patrz: Klasyfikacja 11.2.1.",
+    "Answer": false,
+    "Position": 257
+  },
+  {
+    "Question": "Czy ponizsza lista jest rosnaco uporzadkowana według skalowalnosci NUMA, MPP, SMP",
+    "Description": "MPP jest znacznie bardziej skalowalny niz SMP (pamiec rozproszona \u003E pamiec wspólna). NUMA to systemy SMP z niejednorodnym dostepem do pamiec - sa bardziej skalowalne niz zwykłe SMP (dzieki szybkiej pamieci lokalnej cache), ale mniej niz MPP.",
+    "Answer": false,
+    "Position": 258
+  },
+  {
+    "Question": "Czy ponizsza lista jest rosnaco uporzadkowana według skalowalnosci Systemy z pamiecia wspólna, systemy o niejednorodnym dostepie do pamieci, z pamiecia rozproszona",
+    "Description": "Dwa pierwsze to rodzaje systemów SMP. Najmniej skalowalne sa systemy z pamiecia wspólna, domyslnie o jednorodnym dostepie do pamieci (UMA). Niejednorodny dostep do pamieci wspólnej (NUMA) jest szybszy, poniewaz wykorzystuje pamiec lokalna procesora, wezły i katalogi. Mechanizm katalogów jest o wiele bardziej skalowalny niz mechanizm ”snoopingu”, wykorzystywany w UMA. Nastepnie system z pamiecia rozproszona to MPP - system masywnie równoległy. Jest najbardziej skalowalny ze wszystkich.",
+    "Answer": true,
+    "Position": 259
+  },
+  {
+    "Question": "Czy ponizsza lista jest rosnaco uporzadkowana według skalowalnosci SMP, NUMA, klastry, UMA",
+    "Description": "SMP jest najmniej skalowalny z wymienionych. UMA ma jednorodny dostep do pamieci i jest mniej skalowalna od NUMA. Klastry sa najbardziej skalowalne (nie wiem czy mniej lub bardziej do MPP).",
+    "Answer": false,
+    "Position": 260
+  },
+  {
+    "Question": "Czy ponizsza lista jest rosnaco uporzadkowana według skalowalnosci Systemy symetryczne, o niejednorodnym dostepie do pamieci, systemy z przesyłem komunikatów",
+    "Description": "Systemy symetryczne to SMP z jednorodnym dostepem do pamieci. Systemy SMP z niejednorodnym dostepem sa bardziej skalowalne. Z kolei systemy z przesyłem komunikatów sugeruja system MPP, z pamiecia rozproszona - jest on najbardziej skalowalny.",
+    "Answer": true,
+    "Position": 261
+  },
+  {
+    "Question": "Sprzetowe przełaczenie watków moze byc wynikiem Chybienia przy odwołaniu do pamieci podrecznej.",
+    "Description": "Bez uzasadnienia",
+    "Answer": true,
+    "Position": 262
+  },
+  {
+    "Question": "Sprzetowe przełaczenie watków moze byc wynikiem Upływu zadanego czasu (np. taktu)",
+    "Description": "Jest cos takiego jak wielowatkowosc drobnoziarnista, która przełacza watki co takt.",
+    "Answer": true,
+    "Position": 263
+  },
+  {
+    "Question": "Sprzetowe przełaczenie watków moze byc wynikiem Wystapienia rozkazu rozgałezienia",
+    "Description": "Dopiero jak nastapi bład przewidywania. Przy drabince IFów byłby armageddon.",
+    "Answer": false,
+    "Position": 264
+  },
+  {
+    "Question": "Sprzetowe przełaczenie watków moze byc wynikiem Błednego przewidywania rozgałezien",
+    "Description": "Bez uzasadnienia",
+    "Answer": true,
+    "Position": 265
+  },
+  {
+    "Question": "Sprzetowe przełaczenie watków moze byc wynikiem Przesuniecia okien rejestrów",
+    "Description": "To tylko zmiana rejestrów, niezwiazana z watkami.",
+    "Answer": false,
+    "Position": 266
+  },
+  {
+    "Question": "Sprzetowe sterowanie wielowatkowoscia Zapewnia lepsze wykorzystanie potoków.",
+    "Description": "Tak, ma na celu minimalizacje problemów, jakie stwarza przetwarzanie potokowe, jak hazard sterowania, zaleznosci miedzy rozkazami oraz chybione odwołania do pamieci.",
+    "Answer": true,
+    "Position": 267
+  },
+  {
+    "Question": "Sprzetowe sterowanie wielowatkowoscia Wymaga zwielokrotnienia zasobów procesora (rejestry, liczniki rozkazów i inne)",
+    "Description": "Tak, aby móc wykonac sterowac watkami na poziomie sprzetu potrzeba wiecej sprzetu.",
+    "Answer": true,
+    "Position": 268
+  },
+  {
+    "Question": "Sprzetowe sterowanie wielowatkowoscia Nie moze byc stosowane w przypadku hazardu sterowania",
+    "Description": "To sterowanie słuzy własnie minimalizacji start powstałych m.in. z hazardu sterowania.",
+    "Answer": false,
+    "Position": 269
+  },
+  {
+    "Question": "Sprzetowe sterowanie wielowatkowoscia M.in. minimalizuja straty wynikajace z chybionych odwołan do pamieci podrecznej",
+    "Description": "Bez uzasadnienia",
+    "Answer": true,
+    "Position": 270
+  },
+  {
+    "Question": "Dostep kazdego procesora do wspólnej pamieci operacyjnej jest realizowany w systemach NUMA",
+    "Description": "W NUMA pamiec jest rozdzielona fizycznie, ale logicznie wspólna. Wszystkie procesory maja do niej dostep.",
+    "Answer": true,
+    "Position": 271
+  },
+  {
+    "Question": "Dostep kazdego procesora do wspólnej pamieci operacyjnej jest realizowany w systemach SMP",
+    "Description": "Wszystkie modele SMP, jak UMA, NUMA czy CC-NUMA posiadaja pamiec logicznie wspólna.",
+    "Answer": true,
+    "Position": 272
+  },
+  {
+    "Question": "Dostep kazdego procesora do wspólnej pamieci operacyjnej jest realizowany w systemach Klaster",
+    "Description": "Pamiec jest logicznie rozproszona, kazdy wezeł(czyli system) posiada swoja.",
+    "Answer": false,
+    "Position": 273
+  },
+  {
+    "Question": "Dostep kazdego procesora do wspólnej pamieci operacyjnej jest realizowany w systemach MPP",
+    "Description": "Pamiec jest logicznie rozproszona, kazdy wezeł (procesor albo system UMA / NUMA) posiada swoja.",
+    "Answer": false,
+    "Position": 274
+  },
+  {
+    "Question": "Procesory wielordzeniowe Sa niezbedne do realizacji rozkazów wektorowych.",
+    "Description": "Nie, o ile wiele rdzeni moze umozliwic wykonywanie rozkazów wektorowych, to warunkiem koniecznym do wykonywania rozkazów wektorowych jest istnieje wielu jednostek przetwarzajacych w dowolnej postaci.",
+    "Answer": false,
+    "Position": 275
+  },
+  {
+    "Question": "Procesory wielordzeniowe Sa niezbedne do współbieznego przetwarzania watkowego.",
+    "Description": "Tak, jest to konieczne aby realizowac współbieznie wiele watkóW w obrebie jednego procesora.",
+    "Answer": true,
+    "Position": 276
+  }
+]
