@@ -1,6 +1,6 @@
 # FajniejszeAK
 
-Za zdanie WASZE i NASZE
+Za zaliczenie NASZE i WASZE
 
 ## Strona projektu
 
