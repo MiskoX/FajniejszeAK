@@ -15,7 +15,27 @@ function Quiz() {
     setQuestions(questionsData);
     setAllOfQuestion(questionsData.length);
     setProcent(0);
-  }, []);
+    }, []);
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (stateOfQuestion === null) {
+        if (event.key === "P" || event.key === "p") {
+          handleAnswer(true);
+        } else if (event.key === "F" || event.key === "f") {
+          handleAnswer(false);
+        }
+      } else {
+        nextQuestion();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [stateOfQuestion]);
 
   const handleAnswer = (answer) => {
     const answerQue = answeredQuestions + 1;
