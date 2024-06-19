@@ -79,9 +79,9 @@ function Quiz({ questions, setQuestions, questionsData }) {
     <div className="Quiz">
       <div className="Navbar">
         <p>
-          Liczba pytań: {currentQuestionIndex + 1}/{allOfQuestion}
+          Pytania: {currentQuestionIndex + 1}/{allOfQuestion}
         </p>
-        <p>Liczba Procent: {procent}%</p>
+        <p>Procenty: {procent}%</p>
       </div>
       <div className={`QuestionBox ${questionBoxClass}`}>
         {questions.length > 0 && (
