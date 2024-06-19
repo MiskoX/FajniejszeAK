@@ -194,9 +194,12 @@ p{
 
   .Description{
     border-radius: 25px;
+    font-size: 17px;
+  }
+
+  .Description.show{
     padding: 10px 15px;
     margin-top: 10px;
-    font-size: 17px;
   }
 
   .Description p{
