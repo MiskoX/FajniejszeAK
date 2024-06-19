@@ -63,10 +63,12 @@ p{
 
 .QuestionBox.correct {
   background-color: lightgreen; /* zielony dla poprawnej odpowiedzi */
+  transition: ease-in-out 0.2s;
 }
 
 .QuestionBox.incorrect {
   background-color: lightcoral; /* czerwony dla niepoprawnej odpowiedzi */
+  transition: ease-in-out 0.2s;
 }
 
 .Question{
@@ -185,5 +187,10 @@ p{
     margin: 10px 0;
   }
 
+  .Button button:hover{
+    transition: ease-in-out 0.2s;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
 
 }

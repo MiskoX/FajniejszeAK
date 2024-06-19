@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import questionsData from "../data/questions.json";
+import DoubleButton from "../components/DoubleButton";
+import SingleButton from "../components/SingleButton";
 
 function Quiz() {
   const [questions, setQuestions] = useState([]);
@@ -15,7 +17,7 @@ function Quiz() {
     setQuestions(questionsData);
     setAllOfQuestion(questionsData.length);
     setProcent(0);
-    }, []);
+  }, []);
 
   useEffect(() => {
     const handleKeyPress = (event) => {
@@ -40,7 +42,7 @@ function Quiz() {
   const handleAnswer = (answer) => {
     const answerQue = answeredQuestions + 1;
     var correctAns = correctAnswers;
-    
+
     if (answer === questions[currentQuestionIndex].Answer) {
       correctAns = correctAns + 1;
       setQuestionBoxClass("correct");
@@ -92,20 +94,9 @@ function Quiz() {
         )}
       </div>
       {stateOfQuestion ? (
-        <div className="SingleButton">
-          <div className="Button">
-            <button onClick={() => nextQuestion()}>Następne pytanie</button>
-          </div>
-        </div>
+        <SingleButton nextQuestion={nextQuestion} />
       ) : (
-        <div className="Buttons">
-          <div className="Button">
-            <button onClick={() => handleAnswer(true)}>Prawda</button>
-          </div>
-          <div className="Button">
-            <button onClick={() => handleAnswer(false)}>Fałsz</button>
-          </div>
-        </div>
+        <DoubleButton handleAnswer={handleAnswer} />
       )}
     </div>
   );
