@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import DoubleButton from "../components/DoubleButton";
 import SingleButton from "../components/SingleButton";
 import { useNavigate } from "react-router-dom";
 
-function Quiz({questions, setQuestions, questionsData}) {
-  
+function Quiz({ questions, setQuestions, questionsData }) {
   const navigate = useNavigate();
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [procent, setProcent] = useState(0);
   const [answeredQuestions, setAnsweredQuestions] = useState(0);
   const [allOfQuestion, setAllOfQuestion] = useState(0);
-  const [questionBoxClass, setQuestionBoxClass] = useState(null);
+  const [questionBoxClass, setQuestionBoxClass] = useState("");
   const [stateOfQuestion, setStateOfQuestion] = useState(null);
-  const [showDescription, setShowDescription] = useState(null);
 
   useEffect(() => {
     if (questions.length === 0) {
@@ -29,7 +28,6 @@ function Quiz({questions, setQuestions, questionsData}) {
 
   useEffect(() => {
     const handleKeyPress = (event) => {
-
       if (stateOfQuestion === null) {
         if (event.key === "P" || event.key === "p") {
           handleAnswer(true);
@@ -49,7 +47,6 @@ function Quiz({questions, setQuestions, questionsData}) {
   }, [stateOfQuestion, currentQuestionIndex]);
 
   const handleAnswer = (answer) => {
-
     const answerQue = answeredQuestions + 1;
     let correctAns = correctAnswers;
 
@@ -74,7 +71,7 @@ function Quiz({questions, setQuestions, questionsData}) {
       console.log("Koniec quizu");
       navigate("/");
     }
-    setQuestionBoxClass(null);
+    setQuestionBoxClass("");
     setStateOfQuestion(null);
   };
 
@@ -93,14 +90,18 @@ function Quiz({questions, setQuestions, questionsData}) {
             <p>{questions[currentQuestionIndex].Question}</p>
           </div>
         )}
-        {stateOfQuestion ? (
-            <div className="Description">
-              Opis:
-              <p> {questions[currentQuestionIndex].Description}</p>
-            </div>
-        ) : (
-          <></>
-        )}
+        <div
+          className={`Description ${stateOfQuestion ? "show" : ""}`}
+        >
+          {stateOfQuestion ? (
+            <>
+            Opis:
+            <p>{questions[currentQuestionIndex].Description}</p>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
       {stateOfQuestion ? (
         <SingleButton nextQuestion={nextQuestion} />
