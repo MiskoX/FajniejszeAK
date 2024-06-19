@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import DoubleButton from "../components/DoubleButton";
 import SingleButton from "../components/SingleButton";
 import { useNavigate } from "react-router-dom";
@@ -84,28 +84,26 @@ function Quiz({ questions, setQuestions, questionsData }) {
         <p>Procenty: {procent}%</p>
       </div>
       <div className="Box">
-      <div className={`QuestionBox ${questionBoxClass}`}>
-        {questions.length > 0 && (
-          <div className="Question">
-            <div>Pytanie:</div>
-            <p>{questions[currentQuestionIndex].Question}</p>
-          </div>
-        )}
-        <div
-          className={`Description ${stateOfQuestion ? "show" : ""}`}
-        >
-          {stateOfQuestion ? (
-            <>
-            Opis:
-            <p>{questions[currentQuestionIndex].Description}</p>
-            </>
-          ) : (
-            <></>
+        <div className={`QuestionBox ${questionBoxClass}`}>
+          {questions.length > 0 && (
+            <div className="Question">
+              <div>Pytanie:</div>
+              <p>{questions[currentQuestionIndex].Question}</p>
+            </div>
           )}
+          <div className={`Description ${stateOfQuestion ? "show" : ""}`}>
+            {stateOfQuestion ? (
+              <>
+                Opis:
+                <p>{questions[currentQuestionIndex].Description}</p>
+              </>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
       </div>
-      </div>
-      
+
       {stateOfQuestion ? (
         <SingleButton nextQuestion={nextQuestion} />
       ) : (

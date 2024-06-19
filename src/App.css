@@ -188,6 +188,7 @@ p {
   .Buttons {
     grid-column-gap: 10px;
     margin: 10px 0;
+    margin-bottom: 10vh;
   }
 
   .Box {
