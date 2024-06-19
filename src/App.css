@@ -22,7 +22,7 @@ p{
   font-weight: normal;
 }
 
-.Quiz{
+.Quiz, .Menu{
   width: 70%;
   min-height: 100vh;
   display: flex;
@@ -90,7 +90,7 @@ p{
   font-weight: bold;
 }
 
-.Button button{
+.Button button, .Menu a{
   border: none;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 15px 20px;
@@ -105,9 +105,14 @@ p{
   transition: ease-in-out 0.2s;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
   user-select: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: black;
 }
 
-.Button button:hover{
+.Button button:hover,
+.Menu a:hover{
   background-color: rgba(11,26,33,255);
   color: white;
   transition: ease-in-out 0.2s;
@@ -131,6 +136,13 @@ p{
 .Button{
   display: flex;
   justify-content: center;
+}
+
+.Menu .Title{
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 700px) {

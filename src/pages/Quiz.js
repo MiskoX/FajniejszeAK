@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import questionsData from "../data/questions.json";
 import DoubleButton from "../components/DoubleButton";
 import SingleButton from "../components/SingleButton";
+import { useNavigate } from "react-router-dom";
 
-function Quiz() {
-  const [questions, setQuestions] = useState([]);
+function Quiz({questions, setQuestions, questionsData}) {
+  
+  const navigate = useNavigate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [procent, setProcent] = useState(0);
@@ -12,15 +13,23 @@ function Quiz() {
   const [allOfQuestion, setAllOfQuestion] = useState(0);
   const [questionBoxClass, setQuestionBoxClass] = useState(null);
   const [stateOfQuestion, setStateOfQuestion] = useState(null);
+  const [showDescription, setShowDescription] = useState(null);
 
   useEffect(() => {
-    setQuestions(questionsData);
-    setAllOfQuestion(questionsData.length);
-    setProcent(0);
+    if (questions.length === 0) {
+      setQuestions(questionsData);
+      setAllOfQuestion(questionsData.length);
+      setProcent(0);
+      navigate("/");
+    } else {
+      setAllOfQuestion(questions.length);
+      setProcent(0);
+    }
   }, []);
 
   useEffect(() => {
     const handleKeyPress = (event) => {
+
       if (stateOfQuestion === null) {
         if (event.key === "P" || event.key === "p") {
           handleAnswer(true);
@@ -37,14 +46,15 @@ function Quiz() {
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
     };
-  }, [stateOfQuestion]);
+  }, [stateOfQuestion, currentQuestionIndex]);
 
   const handleAnswer = (answer) => {
+
     const answerQue = answeredQuestions + 1;
-    var correctAns = correctAnswers;
+    let correctAns = correctAnswers;
 
     if (answer === questions[currentQuestionIndex].Answer) {
-      correctAns = correctAns + 1;
+      correctAns += 1;
       setQuestionBoxClass("correct");
       setCorrectAnswers(correctAns);
     } else {
@@ -62,6 +72,7 @@ function Quiz() {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       console.log("Koniec quizu");
+      navigate("/");
     }
     setQuestionBoxClass(null);
     setStateOfQuestion(null);
@@ -83,12 +94,10 @@ function Quiz() {
           </div>
         )}
         {stateOfQuestion ? (
-          <>
             <div className="Description">
               Opis:
               <p> {questions[currentQuestionIndex].Description}</p>
             </div>
-          </>
         ) : (
           <></>
         )}
