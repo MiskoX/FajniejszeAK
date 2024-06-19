@@ -24,6 +24,11 @@ p{
 
 .Quiz{
   width: 70%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .Navbar{
@@ -87,7 +92,7 @@ p{
   border: none;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 15px 20px;
-  border-radius: 20px;
+  border-radius: 35px;
   width: 50%;
 
   display: flex;
@@ -113,12 +118,12 @@ p{
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .SingleButton{
   width: 100%;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .Button{
@@ -130,9 +135,55 @@ p{
   .Quiz {
     width: 100%;
     padding: 10px;
+    justify-content: space-between;
+  }
+
+  .Navbar{
+    font-size: 15px;
   }
 
   .Button button{
     width: 100%;
+    font-size: 15px;
   }
+
+  .Navbar{
+    margin: 10px 0;
+  }
+
+  .Buttons{
+    grid-column-gap: 10px;
+    margin: 10px 0;
+  }
+
+  .QuestionBox{
+    padding: 10px;
+  }
+
+  .Question{
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 17px;
+  }
+
+  .Question p{
+    font-size: 15px;
+  }
+
+  .Description{
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 17px;
+  }
+
+  .Description p{
+    font-size: 15px;
+  }
+
+  .SingleButton{
+    margin: 10px 0;
+  }
+
+
 }
