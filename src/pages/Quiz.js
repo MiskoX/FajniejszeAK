@@ -83,6 +83,7 @@ function Quiz({ questions, setQuestions, questionsData }) {
         </p>
         <p>Procenty: {procent}%</p>
       </div>
+      <div className="Box">
       <div className={`QuestionBox ${questionBoxClass}`}>
         {questions.length > 0 && (
           <div className="Question">
@@ -103,6 +104,8 @@ function Quiz({ questions, setQuestions, questionsData }) {
           )}
         </div>
       </div>
+      </div>
+      
       {stateOfQuestion ? (
         <SingleButton nextQuestion={nextQuestion} />
       ) : (

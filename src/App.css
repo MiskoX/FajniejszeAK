@@ -5,8 +5,13 @@
   outline: none;
 }
 
-.App{
-  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+.App {
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
 
   width: 100%;
   min-height: 100vh;
@@ -18,11 +23,12 @@
   font-size: 20px;
 }
 
-p{
+p {
   font-weight: normal;
 }
 
-.Quiz, .Menu{
+.Quiz,
+.Menu {
   width: 70%;
   min-height: 100vh;
   display: flex;
@@ -31,7 +37,11 @@ p{
   align-items: center;
 }
 
-.Navbar{
+.Box{
+  width: 100%;
+}
+
+.Navbar {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
@@ -46,13 +56,13 @@ p{
   user-select: none;
 }
 
-.Navbar p{
+.Navbar p {
   display: flex;
   justify-content: center;
   padding: 15px;
 }
 
-.QuestionBox{
+.QuestionBox {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
@@ -71,7 +81,7 @@ p{
   transition: ease-in-out 0.2s;
 }
 
-.Question{
+.Question {
   padding: 10px 20px;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.8);
@@ -98,7 +108,8 @@ p{
   margin-top: 20px;
 }
 
-.Button button, .Menu a{
+.Button button,
+.Menu a {
   border: none;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 15px 20px;
@@ -120,13 +131,13 @@ p{
 }
 
 .Button button:hover,
-.Menu a:hover{
-  background-color: rgba(11,26,33,255);
+.Menu a:hover {
+  background-color: rgba(11, 26, 33, 255);
   color: white;
   transition: ease-in-out 0.2s;
 }
 
-.Buttons{
+.Buttons {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -136,17 +147,17 @@ p{
   margin: 20px 0;
 }
 
-.SingleButton{
+.SingleButton {
   width: 100%;
   margin: 20px 0;
 }
 
-.Button{
+.Button {
   display: flex;
   justify-content: center;
 }
 
-.Menu .Title{
+.Menu .Title {
   font-size: 40px;
   font-weight: bold;
   color: white;
@@ -157,63 +168,67 @@ p{
   .Quiz {
     width: 100%;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
-  .Navbar{
+  .Navbar {
     font-size: 15px;
   }
 
-  .Button button{
+  .Button button {
     width: 100%;
     font-size: 15px;
   }
 
-  .Navbar{
+  .Navbar {
     margin: 10px 0;
+    flex: 0 0 auto;
   }
 
-  .Buttons{
+  .Buttons {
     grid-column-gap: 10px;
     margin: 10px 0;
   }
 
-  .QuestionBox{
+  .Box {
+    flex: 1;
+    width: 100%;
+  }
+
+  .QuestionBox {
     padding: 10px;
   }
 
-  .Question{
+  .Question {
     border-radius: 25px;
     padding: 10px 15px;
     font-size: 17px;
   }
 
-  .Question p{
+  .Question p {
     font-size: 15px;
   }
 
-  .Description{
+  .Description {
     border-radius: 25px;
     font-size: 17px;
   }
 
-  .Description.show{
+  .Description.show {
     padding: 10px 15px;
     margin-top: 10px;
   }
 
-  .Description p{
+  .Description p {
     font-size: 15px;
   }
 
-  .SingleButton{
+  .SingleButton {
     margin: 10px 0;
   }
 
-  .Button button:hover{
+  .Button button:hover {
     transition: ease-in-out 0.2s;
     background-color: rgba(255, 255, 255, 0.8);
   }
-  
-
 }
