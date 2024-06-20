@@ -1,5 +1,3 @@
-<h1>FajniejszeAK</h1>
-
 <p align="center" width="100%">
     <a href="https://miskox.github.io/FajniejszeAK"><img src="https://miskox.github.io/FajniejszeAK/static/media/logo.8b70dfa0adfdabfb5699.png" /></a>
 </p>
