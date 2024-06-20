@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import DoubleButton from "../components/DoubleButton";
 import SingleButton from "../components/SingleButton";
 import { useNavigate, useParams } from "react-router-dom";
-import questionsData from "../data/questions.json";
 
-function Quiz({quizType, questions, setQuestions}) {
+function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
   const navigate = useNavigate();
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -16,16 +15,14 @@ function Quiz({quizType, questions, setQuestions}) {
   const [stateOfQuestion, setStateOfQuestion] = useState(null);
 
   useEffect(() => {
-    let questionsArray = questionsData;
+    let questionsArray = [...questionsOriginal]; // kopia tablicy questionsOriginal
 
     switch (quizType) {
       case "random":
         questionsArray = questionsArray.sort(() => Math.random() - 0.5);
-        console.log("Random");
         setQuestions(questionsArray);
         break;
       case "classic":
-        console.log("Classic");
         setQuestions(questionsArray);
         break;
       default:
@@ -34,7 +31,7 @@ function Quiz({quizType, questions, setQuestions}) {
 
     setAllOfQuestion(questionsArray.length);
     setProcent(0);
-  }, [quizType, setQuestions]);
+  }, [quizType]);
 
   useEffect(() => {
     if (questions.length > 0) {

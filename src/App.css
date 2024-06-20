@@ -37,9 +37,12 @@ p {
   align-items: center;
 }
 
+.Menu{
+  gap: 20px;
+}
+
 .Logo{
   width: 100%;
-  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,8 +194,8 @@ p {
     padding: 10px;
   }
 
-  .Logo{
-    padding-bottom: 10px;
+  .Menu{
+    gap: 10px;
   }
 
   .Logo img{
