@@ -4,8 +4,8 @@
     <a href="https://miskox.github.io/FajniejszeAK"><img src="https://miskox.github.io/FajniejszeAK/static/media/logo.8b70dfa0adfdabfb5699.png" /></a>
 </p>
 <h2 align="center">Za zaliczenie NASZE i WASZE</h2>
+<strong>Możesz poruszać się między pytaniami, używając przycisków na ekranie lub fizycznych klawiszy na klawiaturze.</strong>
 <ul>
-    <li><strong>Możesz poruszać się między pytaniami, używając przycisków na ekranie lub fizycznych klawiszy na klawiaturze.  </strong></li>
     <li><strong>P - prawda</strong></li>
     <li><strong>F - fałsz</strong></li>
     <li><strong>Aby przejść do następnego pytania, kliknij dowolny przycisk.</strong></li>
