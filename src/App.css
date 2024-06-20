@@ -202,6 +202,10 @@ p {
     width: 100%;
   }
 
+  .Menu a{
+    font-size: 15px;
+  }
+
   .Navbar {
     font-size: 15px;
   }

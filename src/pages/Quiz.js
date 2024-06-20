@@ -93,7 +93,7 @@ function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
     setStateOfQuestion(null);
   };
 
-  console.log("All categories:", categories);
+  // console.log("All categories:", categories);
 
   return (
     <div className="Quiz">
