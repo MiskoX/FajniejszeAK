@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import DoubleButton from "../components/DoubleButton";
 import SingleButton from "../components/SingleButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import questionsData from "../data/questions.json";
 
-function Quiz({ questions, setQuestions, questionsData }) {
+function Quiz({quizType, questions, setQuestions}) {
   const navigate = useNavigate();
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -15,38 +16,51 @@ function Quiz({ questions, setQuestions, questionsData }) {
   const [stateOfQuestion, setStateOfQuestion] = useState(null);
 
   useEffect(() => {
-    if (questions.length === 0) {
-      setQuestions(questionsData);
-      setAllOfQuestion(questionsData.length);
-      setProcent(0);
-      navigate("/");
-    } else {
-      setAllOfQuestion(questions.length);
-      setProcent(0);
+    let questionsArray = questionsData;
+
+    switch (quizType) {
+      case "random":
+        questionsArray = questionsArray.sort(() => Math.random() - 0.5);
+        console.log("Random");
+        setQuestions(questionsArray);
+        break;
+      case "classic":
+        console.log("Classic");
+        setQuestions(questionsArray);
+        break;
+      default:
+        break;
     }
-  }, []);
+
+    setAllOfQuestion(questionsArray.length);
+    setProcent(0);
+  }, [quizType, setQuestions]);
 
   useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (stateOfQuestion === null) {
-        if (event.key === "P" || event.key === "p") {
-          handleAnswer(true);
-        } else if (event.key === "F" || event.key === "f") {
-          handleAnswer(false);
+    if (questions.length > 0) {
+      const handleKeyPress = (event) => {
+        if (stateOfQuestion === null) {
+          if (event.key === "P" || event.key === "p") {
+            handleAnswer(true);
+          } else if (event.key === "F" || event.key === "f") {
+            handleAnswer(false);
+          }
+        } else {
+          nextQuestion();
         }
-      } else {
-        nextQuestion();
-      }
-    };
+      };
 
-    window.addEventListener("keydown", handleKeyPress);
+      window.addEventListener("keydown", handleKeyPress);
 
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
-  }, [stateOfQuestion, currentQuestionIndex]);
+      return () => {
+        window.removeEventListener("keydown", handleKeyPress);
+      };
+    }
+  }, [stateOfQuestion, currentQuestionIndex, questions]);
 
   const handleAnswer = (answer) => {
+    if (questions.length === 0) return;
+
     const answerQue = answeredQuestions + 1;
     let correctAns = correctAnswers;
 
