@@ -13,6 +13,7 @@ function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
   const [allOfQuestion, setAllOfQuestion] = useState(0);
   const [questionBoxClass, setQuestionBoxClass] = useState("");
   const [stateOfQuestion, setStateOfQuestion] = useState(null);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     let questionsArray = [...questionsOriginal]; // kopia tablicy questionsOriginal
@@ -31,11 +32,17 @@ function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
 
     setAllOfQuestion(questionsArray.length);
     setProcent(0);
+
+    const uniqueCategories = [
+      ...new Set(questionsArray.map((q) => q.Category)),
+    ];
+    setCategories(uniqueCategories);
   }, [quizType]);
 
   useEffect(() => {
     if (questions.length > 0) {
       const handleKeyPress = (event) => {
+        if (event.repeat) return;
         if (stateOfQuestion === null) {
           if (event.key === "P" || event.key === "p") {
             handleAnswer(true);
@@ -85,6 +92,8 @@ function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
     setQuestionBoxClass("");
     setStateOfQuestion(null);
   };
+
+  console.log("All categories:", categories);
 
   return (
     <div className="Quiz">
