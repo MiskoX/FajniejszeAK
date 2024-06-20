@@ -37,11 +37,26 @@ p {
   align-items: center;
 }
 
+.Logo{
+  width: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo img{
+  width: 50%;
+}
+
 .Box{
   width: 100%;
 }
 
 .Navbar {
+  position: sticky;
+  top: 0;
+
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
@@ -169,6 +184,19 @@ p {
     width: 100%;
     padding: 10px;
     justify-content: flex-start;
+  }
+
+  .Menu{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .Logo{
+    padding-bottom: 10px;
+  }
+
+  .Logo img{
+    width: 100%;
   }
 
   .Navbar {
