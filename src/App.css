@@ -325,9 +325,31 @@ p {
     font-size: 15px;
   }
 
-  .Button button {
+  .Button button,
+  .PopupContent button {
     width: 100%;
     font-size: 15px;
+  }
+
+  .Popup {
+    padding: 10px;
+  }
+
+  .PopupContent {
+    width: 100%;
+  }
+
+  .PopupContent p {
+    font-size: 15px;
+  }
+
+  .PopupContent div {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .PopupContent {
+    padding: 10px;
   }
 
   .Navbar {

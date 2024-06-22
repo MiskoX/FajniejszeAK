@@ -12,7 +12,10 @@ const Popup = ({ correctAnswers, totalQuestions, onClose }) => {
   return (
     <div className="Popup">
       <div className="PopupContent">
-        <h2>Koniec quizu</h2>
+        <div>Koniec quizu</div>
+        <p>
+          Liczba procent: {Math.round((correctAnswers / totalQuestions) * 100)}%
+        </p>
         <p>
           Poprawne odpowiedzi: {correctAnswers} / {totalQuestions}
         </p>
