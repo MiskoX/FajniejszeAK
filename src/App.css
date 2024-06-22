@@ -35,24 +35,25 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
-.Menu{
+.Menu {
   gap: 20px;
 }
 
-.Logo{
+.Logo {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Logo img{
+.Logo img {
   width: 50%;
 }
 
-.Box{
+.Box {
   width: 100%;
 }
 
@@ -127,7 +128,8 @@ p {
 }
 
 .Button button,
-.Menu a {
+.Menu a,
+.PopupContent button {
   border: none;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 15px 20px;
@@ -149,10 +151,11 @@ p {
 }
 
 .Button button:hover,
-.Menu a:hover {
+.Menu a:hover,
+.PopupContent button:hover {
   background-color: rgba(11, 26, 33, 255);
   color: white;
-  transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.3s;
 }
 
 .Buttons {
@@ -182,6 +185,118 @@ p {
   margin-bottom: 20px;
 }
 
+.Categories {
+  width: 100%;
+  overflow: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  border-radius: 35px;
+}
+
+.Category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  border-radius: 25px;
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  transition: ease-in-out 0.2s;
+}
+
+.Category input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.Category label {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: grey;
+  z-index: 1;
+  transition: ease-in-out 0.2s;
+}
+
+.Category.selected {
+  background-color: rgba(11, 26, 33, 255);
+}
+
+.Category.selected label {
+  color: white;
+}
+
+.Popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+.PopupContent {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+
+  border-radius: 35px;
+}
+
+.PopupContent h2 {
+  margin-top: 0;
+}
+
+.PopupContent button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px 20px;
+  border-radius: 35px;
+  width: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  transition: ease-in-out 0.2s;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: black;
+}
+
 @media screen and (max-width: 700px) {
   .Quiz {
     width: 100%;
@@ -189,20 +304,20 @@ p {
     justify-content: flex-start;
   }
 
-  .Menu{
+  .Menu {
     width: 100%;
     padding: 10px;
   }
 
-  .Menu{
+  .Menu {
     gap: 10px;
   }
 
-  .Logo img{
+  .Logo img {
     width: 100%;
   }
 
-  .Menu a{
+  .Menu a {
     font-size: 15px;
   }
 
@@ -267,5 +382,21 @@ p {
   .Button button:hover {
     transition: ease-in-out 0.2s;
     background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .Categories {
+    padding: 10px;
+
+    height: 78vh;
+    overflow: auto;
+  }
+
+  .Category {
+    border-radius: 25px;
+    flex: 1;
+  }
+
+  .Category label {
+    font-size: 15px;
   }
 }

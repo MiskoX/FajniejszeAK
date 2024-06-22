@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import DoubleButton from "../components/DoubleButton";
 import SingleButton from "../components/SingleButton";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Popup from "../components/Popup";
 
 function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
   const navigate = useNavigate();
@@ -10,33 +11,34 @@ function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [procent, setProcent] = useState(0);
   const [answeredQuestions, setAnsweredQuestions] = useState(0);
-  const [allOfQuestion, setAllOfQuestion] = useState(0);
+  const [totalQuestions, setAllOfQuestion] = useState(0);
   const [questionBoxClass, setQuestionBoxClass] = useState("");
   const [stateOfQuestion, setStateOfQuestion] = useState(null);
-  const [categories, setCategories] = useState([]);
+  const [isQuizFinished, setIsQuizFinished] = useState(false);
 
   useEffect(() => {
     let questionsArray = [...questionsOriginal]; // kopia tablicy questionsOriginal
+    let questionsFilter = [...questions];
 
     switch (quizType) {
       case "random":
         questionsArray = questionsArray.sort(() => Math.random() - 0.5);
         setQuestions(questionsArray);
+        setAllOfQuestion(questionsArray.length);
         break;
       case "classic":
         setQuestions(questionsArray);
+        setAllOfQuestion(questionsArray.length);
+        break;
+      case "category":
+        setQuestions(questionsFilter);
+        setAllOfQuestion(questionsFilter.length);
         break;
       default:
         break;
     }
 
-    setAllOfQuestion(questionsArray.length);
     setProcent(0);
-
-    const uniqueCategories = [
-      ...new Set(questionsArray.map((q) => q.Category)),
-    ];
-    setCategories(uniqueCategories);
   }, [quizType]);
 
   useEffect(() => {
@@ -83,23 +85,26 @@ function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
   };
 
   const nextQuestion = () => {
-    if (currentQuestionIndex + 1 < allOfQuestion) {
+    if (currentQuestionIndex + 1 < totalQuestions) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       console.log("Koniec quizu");
-      navigate("/");
+      setIsQuizFinished(true);
     }
     setQuestionBoxClass("");
     setStateOfQuestion(null);
   };
 
-  // console.log("All categories:", categories);
+  const closeModal = () => {
+    setIsQuizFinished(false);
+    navigate("/");
+  };
 
   return (
     <div className="Quiz">
       <div className="Navbar">
         <p>
-          Pytania: {currentQuestionIndex + 1}/{allOfQuestion}
+          Pytania: {currentQuestionIndex + 1}/{totalQuestions}
         </p>
         <p>Procenty: {procent}%</p>
       </div>
@@ -128,6 +133,14 @@ function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
         <SingleButton nextQuestion={nextQuestion} />
       ) : (
         <DoubleButton handleAnswer={handleAnswer} />
+      )}
+
+      {isQuizFinished && (
+        <Popup
+          correctAnswers={correctAnswers}
+          totalQuestions={totalQuestions}
+          onClose={closeModal}
+        />
       )}
     </div>
   );
