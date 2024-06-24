@@ -6,6 +6,7 @@ import questionsJSON from "./data/questions.json";
 import Quiz from "./pages/Quiz";
 import Menu from "./pages/Menu";
 import MenuCategory from "./pages/MenuCategory";
+import Posters from "./components/Posters";
 
 function App() {
   const [questionsOriginal, setQuestionsOriginal] = useState([]);
@@ -65,6 +66,7 @@ function App() {
               />
             }
           />
+          <Route path="/posters" element={<Posters />} />
         </Routes>
       </div>
     </Router>
