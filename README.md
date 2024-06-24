@@ -3,11 +3,11 @@
 </p>
 <h2 align="center">Za zaliczenie NASZE i WASZE</h2>
 
-<div width"100%" align="center">
-    <img src="https://miskox.github.io/FajniejszeAK/static/media/1.2809f593d107e21df978.png" alt="Image 1" width="25%" />
-    <img src="https://miskox.github.io/FajniejszeAK/static/media/2.4beaa395649456b5bac9.png" alt="Image 2" width="25%" />
-    <img src="https://miskox.github.io/FajniejszeAK/static/media/3.29b07dd862818c5cf6c3.png" alt="Image 3" width="25%" />
-    <img src="https://miskox.github.io/FajniejszeAK/static/media/4.6594b7437998966337d2.png" alt="Image 4" width="25%" />
+<div align="center" width="100%">
+    <img src="https://miskox.github.io/FajniejszeAK/static/media/1.2809f593d107e21df978.png" alt="Image 1" style="object-fit: contain; width: 24%; margin-bottom: 1%;" />
+    <img src="https://miskox.github.io/FajniejszeAK/static/media/2.4beaa395649456b5bac9.png" alt="Image 2" style="object-fit: contain; width: 24%; margin-bottom: 1%;" />
+    <img src="https://miskox.github.io/FajniejszeAK/static/media/3.29b07dd862818c5cf6c3.png" alt="Image 3" style="object-fit: contain; width: 24%; margin-bottom: 1%;" />
+    <img src="https://miskox.github.io/FajniejszeAK/static/media/4.6594b7437998966337d2.png" alt="Image 4" style="object-fit: contain; width: 24%; margin-bottom: 1%;" />
 </div>
 
 <strong>Możesz poruszać się między pytaniami, używając przycisków na ekranie lub fizycznych klawiszy na klawiaturze.</strong>
