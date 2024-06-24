@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.png"
+import Logo from "../assets/logo.png";
 
 function Menu() {
   return (
     <div className="Menu">
-      <div className="Logo"><img src={Logo}></img></div>
+      <div className="Logo">
+        <img src={Logo}></img>
+      </div>
       <Link to="/classic">Pytania po kolei</Link>
       <Link to="/random">Pytania losowe</Link>
       <Link to="/category">Pytania z kategorii</Link>
+      <Link to="/posters">Hmm</Link>
     </div>
   );
 }
