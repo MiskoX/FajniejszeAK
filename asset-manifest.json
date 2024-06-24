@@ -1,18 +1,17 @@
 {
   "files": {
     "main.css": "/FajniejszeAK/static/css/main.8d6d2bac.css",
-    "main.js": "/FajniejszeAK/static/js/main.3e4809e9.js",
-    "static/media/3.png": "/FajniejszeAK/static/media/3.29b07dd862818c5cf6c3.png",
+    "main.js": "/FajniejszeAK/static/js/main.c48e6caa.js",
     "static/media/4.png": "/FajniejszeAK/static/media/4.6594b7437998966337d2.png",
     "static/media/2.png": "/FajniejszeAK/static/media/2.4beaa395649456b5bac9.png",
     "static/media/1.png": "/FajniejszeAK/static/media/1.2809f593d107e21df978.png",
     "static/media/logo.png": "/FajniejszeAK/static/media/logo.8b70dfa0adfdabfb5699.png",
     "index.html": "/FajniejszeAK/index.html",
     "main.8d6d2bac.css.map": "/FajniejszeAK/static/css/main.8d6d2bac.css.map",
-    "main.3e4809e9.js.map": "/FajniejszeAK/static/js/main.3e4809e9.js.map"
+    "main.c48e6caa.js.map": "/FajniejszeAK/static/js/main.c48e6caa.js.map"
   },
   "entrypoints": [
     "static/css/main.8d6d2bac.css",
-    "static/js/main.3e4809e9.js"
+    "static/js/main.c48e6caa.js"
   ]
 }
