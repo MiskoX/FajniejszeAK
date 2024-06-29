@@ -1,5 +1,5 @@
 <p align="center" width="100%" style="background-color: #0d1117;">
-    <a href="https://miskox.github.io/FajniejszeAK"><img src="https://miskox.github.io/FajniejszeAK/static/media/logo.8b70dfa0adfdabfb5699.png" alt="FajniejszeAK Logo" /></a>
+    <a href="https://miskox.github.io/FajniejszeAK"><img src="https://miskox.github.io/FajniejszeAK/static/media/logo.9e8d1c28bb76d9879fcb.png" alt="FajniejszeAK Logo" /></a>
 </p>
 <h2 align="center">Za zaliczenie NASZE i WASZE</h2>
 
