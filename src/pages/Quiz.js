@@ -42,25 +42,27 @@ function Quiz({ quizType, questions, setQuestions, questionsOriginal }) {
   }, [quizType]);
 
   useEffect(() => {
-    if (questions.length > 0) {
-      const handleKeyPress = (event) => {
-        if (event.repeat) return;
-        if (stateOfQuestion === null) {
-          if (event.key === "P" || event.key === "p") {
-            handleAnswer(true);
-          } else if (event.key === "F" || event.key === "f") {
-            handleAnswer(false);
+    if (!isQuizFinished) {
+      if (questions.length > 0) {
+        const handleKeyPress = (event) => {
+          if (event.repeat) return;
+          if (stateOfQuestion === null) {
+            if (event.key === "P" || event.key === "p") {
+              handleAnswer(true);
+            } else if (event.key === "F" || event.key === "f") {
+              handleAnswer(false);
+            }
+          } else {
+            nextQuestion();
           }
-        } else {
-          nextQuestion();
-        }
-      };
+        };
 
-      window.addEventListener("keydown", handleKeyPress);
+        window.addEventListener("keydown", handleKeyPress);
 
-      return () => {
-        window.removeEventListener("keydown", handleKeyPress);
-      };
+        return () => {
+          window.removeEventListener("keydown", handleKeyPress);
+        };
+      }
     }
   }, [stateOfQuestion, currentQuestionIndex, questions]);
 
