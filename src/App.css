@@ -149,6 +149,26 @@ p {
   color: black;
 }
 
+.Checkbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.Button .Checkbox input{
+  margin-right: 20px;
+  transform: scale(2);
+}
+
+.Button .Checkbox input:hover{
+  cursor: pointer;
+}
+
+.Button .Checkbox p{
+  margin-right: 20px;
+}
+
 .Button button:hover,
 .Menu a:hover,
 .PopupContent button:hover {
