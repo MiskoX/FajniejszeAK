@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 function MenuCategory({ questionsOriginal, setFilteredQuestions }) {
   const [categories, setCategories] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [isRandomChecked, setIsRandomChecked] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,10 +26,23 @@ function MenuCategory({ questionsOriginal, setFilteredQuestions }) {
     });
   };
 
+  const shuffleQuestions = (questions) => {
+    for (let i = questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
+    return questions;
+  }
+
+  const handleRandomCheckboxChange = (event) => {
+    setIsRandomChecked(event.target.checked);
+  };
+
   const handleSubmit = () => {
-    const filterQuestions = [...questionsOriginal].filter((q) =>
+    let filterQuestions = [...questionsOriginal].filter((q) =>
       selectedCategories.includes(q.Category)
     );
+    filterQuestions = isRandomChecked ? shuffleQuestions(filterQuestions) : filterQuestions;
     setFilteredQuestions(filterQuestions);
     navigate("/category_quiz");
   };
@@ -38,6 +52,7 @@ function MenuCategory({ questionsOriginal, setFilteredQuestions }) {
 
   return (
     <div className="Quiz">
+    
       <div className="Box">
         <div className="Categories">
           {categories.map((category, index) => (
@@ -59,6 +74,14 @@ function MenuCategory({ questionsOriginal, setFilteredQuestions }) {
       </div>
       <div className="SingleButton">
         <div className="Button">
+          <div className="Checkbox">
+        <p>Losowo</p>
+        <input
+         type="checkbox"
+         checked={isRandomChecked}
+         onChange={handleRandomCheckboxChange}
+         ></input>
+        </div>
           <button
             onClick={handleSubmit}
             disabled={selectedCategories.length === 0}
