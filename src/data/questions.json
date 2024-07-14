@@ -1933,329 +1933,622 @@
     "Description": "Szyna zwrotna umożliwia zapobieżenie opóźnieniom związanym z oczekiwaniem na dane potrzebne do wykonania kolejnych instrukcji, poprzez wyprzedzające pobranie argumentów",
     "Answer": true,
     "Position": 277,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorze jednopotokowym hazardowi danych można zapobiec m.in. poprzez wstrzymywanie napełniania potoku",
     "Description": "to jest sprzętowa metoda usuwania hazardu, polecam slajd Podsumowanie problemu hazardu danych",
     "Answer": true,
     "Position": 278,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorze jednopotokowym hazardowi danych można zapobiec m.in. poprzez wprowadzenie rozkazu NOP między zależne rozkazy",
     "Description": "to metoda programowa usuwania hazardu",
     "Answer": true,
     "Position": 279,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorze jednopotokowym hazardowi danych można zapobiec m.in. poprzez przemianowanie rejestrów",
     "Description": "to jest dla superskalarnych",
     "Answer": false,
     "Position": 280,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorze jednopotokowym hazardowi danych można zapobiec m.in. poprzez przewidywanie rozgałęzień",
     "Description": "nie, to dla hazardu sterowania",
     "Answer": false,
     "Position": 281,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorze jednopotokowym hazardowi danych można zapobiec m.in. poprzez zmianę kolejności rozkazów",
     "Description": "kolejna programowa metoda",
     "Answer": true,
     "Position": 282,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Najlepsze wykorzystanie jednostek funkcjonalnych rdzenia procesora zapewnia przemianowanie wątków przez system operacyjny",
     "Description": "czat mówi, że nie, ale jak ktoś się nie zgadza to proszę zmienić",
     "Answer": false,
     "Position": 283,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Najlepsze wykorzystanie jednostek funkcjonalnych rdzenia procesora zapewnia przemianowanie rejestrów",
     "Description": "to do hazardów danych",
     "Answer": false,
     "Position": 284,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Najlepsze wykorzystanie jednostek funkcjonalnych rdzenia procesora zapewnia wielowątkowoość gruboziarnista",
     "Description": "Jest to jedna z technik wykorzystywanych do zwiększenia wydajności procesora poprzez redukcję opóźnień, ale nie jest to bezpośrednio związane z najlepszym wykorzystaniem jednostek funkcjonalnych rdzenia procesora.",
     "Answer": false,
     "Position": 285,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Najlepsze wykorzystanie jednostek funkcjonalnych rdzenia procesora zapewnia wielowątkowoość jednoczesna",
     "Description": "jest techniką umożliwiającą jednoczesne wykonywanie wielu wątków na jednym fizycznym rdzeniu procesora",
     "Answer": true,
     "Position": 286,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorach superskalarnych zatwierdzanie rozkazów ma na celu zapisanie wyników rozkazów w rejestrach programowych lub pamięci",
     "Description": "chyba tak",
     "Answer": true,
     "Position": 287,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorach superskalarnych zatwierdzanie rozkazów odbywa się w kolejności zapisywania rozkazów",
     "Description": "zdecyfowanie, in-order zapisuje, tylko out of order wykonuje",
     "Answer": true,
     "Position": 288,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorach superskalarnych zatwierdzanie rozkazów jest wykonywane przy wykorzystaniu bufora zmiany kolejności",
     "Description": "Reorder buffer służy głównie do zarządzania przestawianiem i rozwiązywaniem konfliktów zależności danych, ale nie bezpośrednio do zatwierdzania rozkazów.",
     "Answer": false,
     "Position": 289,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W procesorach superskalarnych zatwierdzanie rozkazów jest wykonywane przy wykorzystaniu stacji rezerwacji",
     "Description": "Stacje rezerwacji przechowują rozkazy przed ich wykonaniem, zarządzają nimi w trakcie realizacji i pomagają w zatwierdzaniu wyników po wykonaniu rozkazu w jednostkach wykonawczych.",
     "Answer": true,
     "Position": 290,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W systemach wieloprocesorowych katalogi mogą służyć do utrzymania spójności pamięci podręcznych w procesorze wielordzeniowym ",
     "Description": "Mechanizmy spójności pamięci podręcznej są istotne w procesorach wielordzeniowych, aby zapewnić, że wszystkie rdzenie widzą najnowszą wersję danych.",
     "Answer": true,
     "Position": 291,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W systemach wieloprocesorowych katalogi mogą służyć do utrzymania spójności pamięci podręcznych w systemie wieloprocesorowym z pamięcią wspólną ",
     "Description": "Katalogi (directories) są używane w systemach wieloprocesorowych do śledzenia i utrzymywania spójności danych w pamięciach podręcznych różnych procesorów.",
     "Answer": true,
     "Position": 292,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W systemach wieloprocesorowych katalogi mogą służyć do sterowania przesyłem komunikatów w klastrach ",
     "Description": "Sterowanie przesyłem komunikatów w klastrach zwykle odbywa się przez odpowiednie oprogramowanie lub protokoły komunikacyjne, niekoniecznie przez katalogi.",
     "Answer": false,
     "Position": 293,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "W systemach wieloprocesorowych katalogi mogą służyć do śledzenia przesyłów w protokole MESI ",
     "Description": "Śledzenie przesyłów w protokole MESI jest związane z zarządzaniem spójnością pamięci podręcznych w systemach wieloprocesorowych, ale nie jest bezpośrednio związane z katalogami.",
     "Answer": false,
     "Position": 294,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory graficzne (GPU) realizują model obliczeń SIMT",
     "Description": "Single Instruction, Multiple Threads",
     "Answer": true,
     "Position": 295,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory graficzne (GPU) mogą być wykorzystane jako akceleratory obliczeń m.in. w superkomputerach składają się z wielu multiprocesorów strumieniowych",
     "Description": " Współczesne GPU składają się z wielu multiprocesorów strumieniowych, które są efektywnie wykorzystywane jako akceleratory obliczeniowe w różnych aplikacjach, w tym w superkomputerach.",
     "Answer": true,
     "Position": 296,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory graficzne (GPU) składają się z wielu multiprocesorów strumieniowych",
     "Description": "Każdy multiprocesor strumieniowy (SM) zawiera wiele rdzeni obliczeniowych, które mogą równocześnie przetwarzać różne wątki.",
     "Answer": true,
     "Position": 297,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory graficzne (GPU) wykonują wiązkę wątków jako jeden rozkaz, analogiczny do rozkazu wektorowego ",
     "Description": " Wiązka wątków (thread warp) to grupa wątków, które są wykonywane jednocześnie na jednym multiprocesorze strumieniowym, co pozwala na efektywne wykorzystanie zasobów i realizację równoległości na poziomie instrukcji.",
     "Answer": true,
     "Position": 298,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory graficzne (GPU) wydajnie wykonują obliczenia z równoległością poziomu zadań",
     "Description": "GPU mogą równocześnie przetwarzać wiele wątków, co pozwala na efektywne wykorzystanie zasobów i zwiększenie wydajności obliczeniowej.",
     "Answer": true,
     "Position": 299,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Warunkami użytecznego zastosowania pamięci podręcznych (PaP) są m.in.: znacznie krótszy czas dostępu procesora do PaP niz do pamięci operacyjnej (PaO)",
     "Description": "Pamięć podręczna jest szybsza od pamięci operacyjnej, co umożliwia przyspieszenie dostępu do danych przez procesor.",
     "Answer": true,
     "Position": 300,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Warunkami użytecznego zastosowania pamięci podręcznych (PaP) są m.in.: blokowa wymiana danych między PaP i PaO",
     "Description": "pamięć podręczna działa na zasadzie pobierania danych w blokach, ale nie wymienia ich blokowo z pamięcią operacyjną.",
     "Answer": false,
     "Position": 301,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Warunkami użytecznego zastosowania pamięci podręcznych (PaP) są m.in.: blokowa wymiana danych między procesorem i Pap",
     "Description": "Procesor odczytuje i zapisuje dane z pamięci podręcznej w sposób indywidualny w zależności od potrzeb.",
     "Answer": false,
     "Position": 302,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Warunkami użytecznego zastosowania pamięci podręcznych (PaP) są m.in.: zasada lokalności odwołań do Pao rozkazów realizowanego programu",
     "Description": "Programy często odwołują się do tych samych danych w krótkich okresach czasu, co sprzyja efektywnemu wykorzystaniu pamięci podręcznych.",
     "Answer": true,
     "Position": 303,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Warunkami użytecznego zastosowania pamięci podręcznych (PaP) są m.in.: wielordzeniowa architektura procesora",
     "Description": "Wielordzeniowa architektura procesora sprzyja efektywnemu wykorzystaniu pamięci podręcznych poprzez równoległe przetwarzanie wielu wątków, które mogą korzystać z tych samych zasobów pamięci podręcznej.",
     "Answer": true,
     "Position": 304,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Warunkami użytecznego zastosowania pamięci podręcznych (PaP) są m.in.: wieloprocesorowa architektura komputera",
     "Description": " Wieloprocesorowa architektura komputera również sprzyja efektywnemu wykorzystaniu pamięci podręcznych, ponieważ różne procesory mogą korzystać z tych samych zasobów pamięciowych.",
     "Answer": true,
     "Position": 305,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory wielordzeniowe stanowią systemy wieloprocesorowe ze wspólną pamięcią i jednorodnym dostępem do pamięci",
     "Description": "wszystkie rdzenie procesora mają równy dostęp do wspólnej pamięci operacyjnej.",
     "Answer": true,
     "Position": 306,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory wielordzeniowe wymagają kontroli spójności pamięci podręcznych",
     "Description": "Jest to istotny mechanizm w architekturze wieloprocesorowej",
     "Answer": false,
     "Position": 307,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory wielordzeniowe stanowią podstawę rozkazów wektorowych",
     "Description": "Rozkazy wektorowe są zwykle obsługiwane przez procesory wektorowe lub GPU, gdzie wykonują operacje na wektorach danych jednocześnie.",
     "Answer": false,
     "Position": 308,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Procesory wielordzeniowe są niezbędne do przetwarzania wielowątkowego",
     "Description": "Posiadanie wielu rdzeni umożliwia jednoczesne wykonywanie wielu wątków, co zwiększa wydajność i skalowalność systemów przetwarzania",
     "Answer": true,
     "Position": 309,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Z modelem SIMD związane są zazwyczaj następujące cechy architektury procesorów: obecność rozkazów wektorowych w liście rozkazów",
     "Description": "Rozkazy wektorowe umożliwiają jednoczesne wykonanie operacji na wielu elementach danych.",
     "Answer": true,
     "Position": 310,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Z modelem SIMD związane są zazwyczaj następujące cechy architektury procesorów: wykorzystanie równoległości poziomu danych w realizowanych programach",
     "Description": "Programy są pisane w taki sposób, aby wykorzystywać te same instrukcje na różnych zbiorach danych, co prowadzi do efektywnego wykorzystania zasobów procesora.",
     "Answer": true,
     "Position": 311,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Z modelem SIMD związane są zazwyczaj następujące cechy architektury procesorów: utrzymanie spójności pamięci podręcznej przy pomocy katalogu",
     "Description": "Katalogi są bardziej związane z architekturą wieloprocesorową lub z technikami zarządzania spójnością pamięci podręcznych ",
     "Answer": false,
     "Position": 312,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Z modelem SIMD związane są zazwyczaj następujące cechy architektury procesorów: obecność wielu jednostek arytmetycznych w procesorze dla zrównoleglenia operacji na wektorach",
     "Description": "rocesory SIMD często posiadają specjalne jednostki wykonawcze do operacji na wektorach, co pozwala na równoczesne wykonywanie tych samych operacji na wielu danych.",
     "Answer": true,
     "Position": 313,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Klaster komputerowy może być zbudowany z wielu komputerów typu PC (Personal Computer)",
     "Description": "laby",
     "Answer": true,
     "Position": 314,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Klaster komputerowy może być zbudowany z wielu serwerów komputerowych",
     "Description": "Serwery mogą być używane jako węzły w klastrze do obsługi różnych zadań obliczeniowych.",
     "Answer": true,
     "Position": 315,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Klaster komputerowy może być zbudowany z wielu węzłów w postaci procesorów graficznych (GPU)",
     "Description": "GPU są coraz częściej wykorzystywane jako akceleratory obliczeniowe w klastrach do intensywnych obliczeń.",
     "Answer": true,
     "Position": 316,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Klaster komputerowy może być zbudowany z wielu węzłów w postaci systemów wieloprocesorowych z pamięcią wspólną",
     "Description": "Takie systemy pozwalają na współdzielenie pamięci między procesorami, co ułatwia koordynację i wymianę danych między węzłami.",
     "Answer": true,
     "Position": 317,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Klaster komputerowy może być zbudowany z wielu węzłów w postaci systemów wieloprocesorowych z pamięcią rozproszoną",
     "Description": "W takich systemach każdy węzeł ma własną pamięć, a komunikacja między węzłami odbywa się przez sieć komputerową.",
     "Answer": true,
     "Position": 318,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Dragonfly i Grube drzewo to topologie sieci łączących węzły w systemach wieloprocesorowych z pamięcią wspólną",
     "Description": "Oba typy topologii są używane w klastrach z pamięcią wspólną do efektywnego zarządzania komunikacją między węzłami.",
     "Answer": true,
     "Position": 319,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Dragonfly i Grube drzewo to topologie sieci łączących węzły w systemach wieloprocesorowych z pamięcią rozproszoną",
     "Description": "Te topologie są dedykowane dla systemów z pamięcią wspólną, a nie rozproszoną.",
     "Answer": false,
     "Position": 320,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Dragonfly i Grube drzewo to metody zapewnienia spójności pamięci podręcznych w procesorach wielordzeniowych",
     "Description": " Spójność pamięci podręcznych dotyczy mechanizmów zarządzania danymi w pamięci podręcznej, a nie topologii sieci.",
     "Answer": false,
     "Position": 321,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Dragonfly i Grube drzewo to topologie sieci łączących rdzenie procesorów wielordzeniowych",
     "Description": "Te topologie są stosowane na poziomie połączeń między węzłami, a nie na poziomie rdzeni procesorów.",
     "Answer": false,
     "Position": 322,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
   },
   {
     "Question": "Dragonfly i Grube drzewo to dwa różne protokoły przesyłu komunikatów w sieci Infiniband",
     "Description": "Infiniband to technologia sieciowa, która może być używana z różnymi topologiami, ale nie jest bezpośrednio powiązana",
     "Answer": false,
     "Position": 323,
-    "Category": "Egzamin"
+    "Category": "Egzamin1"
+  },
+  {
+    "Question": "Przemianowanie rejestrów pozwala unikać hazardu powodowanego przez antyzależność.",
+    "Description": "Antyzależność to sytuacja, w której instrukcja próbuje zapisać wartość do rejestru, zanim poprzednia instrukcja, która odczytuje z tego rejestru, zostanie wykonana.",
+    "Answer": true,
+    "Position": 324,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przemianowanie rejestrów pozwala unikać hazardu powodowanego przez prawdziwą zależność danych.",
+    "Description": "Prawdziwa zależność danych występuje, gdy jedna instrukcja potrzebuje wyniku poprzedniej instrukcji. Przemianowanie rejestrów nie eliminuje tej zależności.",
+    "Answer": false,
+    "Position": 325,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przemianowanie rejestrów pozwala unikać hazardu powodowanego przez zależność wyjściową.",
+    "Description": "Zależność wyjściowa występuje, gdy dwie instrukcje zapisują do tego samego rejestru. Przemianowanie rejestrów może to rozwiązać.",
+    "Answer": true,
+    "Position": 326,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przemianowanie rejestrów pozwala unikać hazardu powodowanego przez wystąpienie rozgałęzienia.",
+    "Description": "Hazard rozgałęzienia nie jest rozwiązywany przez przemianowanie rejestrów.",
+    "Answer": false,
+    "Position": 327,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przemianowanie rejestrów pozwala unikać hazardu powodowanego przez chybione odwołanie do pamięci podręcznej.",
+    "Description": "Chybione odwołanie do pamięci podręcznej nie jest problemem, który można rozwiązać przez przemianowanie rejestrów.",
+    "Answer": false,
+    "Position": 328,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W różnych algorytmach przewidywania rozgałęzień wykorzystuje się historię tylko ostatniego wykonania danego rozgałęzienia.",
+    "Description": "Niektóre algorytmy przewidywania rozgałęzień używają historii ostatniego wykonania.",
+    "Answer": true,
+    "Position": 329,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W różnych algorytmach przewidywania rozgałęzień wykorzystuje się lokalną historię z ostatnich wykonań danego rozgałęzienia.",
+    "Description": "Lokalna historia jest używana przez algorytmy przewidywania rozgałęzień.",
+    "Answer": true,
+    "Position": 330,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W różnych algorytmach przewidywania rozgałęzień wykorzystuje się globalną historię wykonań na ostatnich rozgałęzień.",
+    "Description": "Globalna historia jest używana przez bardziej zaawansowane algorytmy przewidywania.",
+    "Answer": true,
+    "Position": 331,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W różnych algorytmach przewidywania rozgałęzień wykorzystuje się założenie, że rozgałęzienie nigdy się nie wykona.",
+    "Description": "Proste algorytmy mogą zakładać, że rozgałęzienie nigdy się nie wykona, ale nie jest to powszechne ze względu na niską skuteczność.",
+    "Answer": false,
+    "Position": 332,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Wstawianie rozkazu NOP (no operation) między konfliktowe rozkazy procesora jednopotokowego umożliwia eliminację prawdziwej zależności danych.",
+    "Description": "Rozkaz NOP dodaje opóźnienie, co może pomóc w eliminacji hazardu danych.",
+    "Answer": true,
+    "Position": 333,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Wstawianie rozkazu NOP (no operation) między konfliktowe rozkazy procesora jednopotokowego umożliwia eliminację zależności wyjściowej.",
+    "Description": "Dodanie NOP między konfliktowe rozkazy może opóźnić operację, eliminując tym samym zależność wyjściową.",
+    "Answer": true,
+    "Position": 334,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Wstawianie rozkazu NOP (no operation) między konfliktowe rozkazy procesora jednopotokowego umożliwia eliminację antyzależności.",
+    "Description": "NOP może pomóc w eliminacji antyzależności poprzez dodanie opóźnienia między instrukcjami.",
+    "Answer": true,
+    "Position": 335,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Wstawianie rozkazu NOP (no operation) między konfliktowe rozkazy procesora jednopotokowego umożliwia eliminację chybionego odwołania do pamięci podręcznej.",
+    "Description": "NOP nie wpływa na chybione odwołania do pamięci podręcznej.",
+    "Answer": false,
+    "Position": 336,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Wstawianie rozkazu NOP (no operation) między konfliktowe rozkazy procesora jednopotokowego umożliwia eliminację błędnego przewidywania rozgałęzienia.",
+    "Description": "NOP może opóźniać wykonanie, ale nie eliminuje błędów w przewidywaniu rozgałęzień.",
+    "Answer": false,
+    "Position": 337,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Spójność pamięci podręcznych systemu wieloprocesorowego oznacza, że te same dane pobrane do różnych pamięci podręcznych mają identyczne wartości.",
+    "Description": "Spójność pamięci podręcznych wymaga, aby wszystkie kopie danych w różnych pamięciach podręcznych były zgodne.",
+    "Answer": true,
+    "Position": 338,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Spójność pamięci podręcznych systemu wieloprocesorowego oznacza, że cała zawartość wszystkich pamięci podręcznych jest identyczna.",
+    "Description": "Spójność nie oznacza, że cała zawartość jest identyczna, ale że kopie tych samych danych są zgodne.",
+    "Answer": false,
+    "Position": 339,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Spójność pamięci podręcznych systemu wieloprocesorowego oznacza, że modyfikacja w jednej pamięci danej umieszczonej w kilku pamięciach podręcznych jest automatycznie powtarzana w pozostałych pamięciach.",
+    "Description": "Zmiany dokonane w jednej pamięci podręcznej muszą być propagowane do innych, aby utrzymać spójność.",
+    "Answer": true,
+    "Position": 340,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Spójność pamięci podręcznych systemu wieloprocesorowego oznacza, że modyfikacja w jednej pamięci danej umieszczonej w kilku pamięciach podręcznych powoduje automatyczne unieważnienie tej danej w pozostałych pamięciach.",
+    "Description": "Modyfikacja może powodować unieważnienie nieaktualnych kopii w innych pamięciach, aby zapewnić spójność.",
+    "Answer": true,
+    "Position": 341,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Skutkiem błędnego przewidywania rozgałęzienia może być wystąpienie wyjątku w realizacji programu.",
+    "Description": "Błędne przewidywanie rozgałęzienia może prowadzić do nieprawidłowego wykonania programu, co może skutkować wyjątkiem.",
+    "Answer": true,
+    "Position": 342,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Skutkiem błędnego przewidywania rozgałęzienia może być konieczność powtórzenia realizacji całego programu.",
+    "Description": "Błędne przewidywanie zazwyczaj wymaga powtórzenia tylko części programu, nie całego.",
+    "Answer": false,
+    "Position": 343,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Skutkiem błędnego przewidywania rozgałęzienia może być konieczność usunięcia rozkazów z błędnie rozpoczętej ścieżki programu.",
+    "Description": "Błędne przewidywanie często skutkuje potrzebą usunięcia instrukcji z błędnie przewidzianej ścieżki.",
+    "Answer": true,
+    "Position": 344,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Skutkiem błędnego przewidywania rozgałęzienia może być konieczność powtórzenia realizacji programu od rozważanego rozgałęzienia.",
+    "Description": "Po błędnym przewidywaniu rozgałęzienia, program musi powtórzyć wykonanie od momentu rozgałęzienia.",
+    "Answer": true,
+    "Position": 345,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przełącznica krzyżowa tworzy sieć nieblokującą.",
+    "Description": "Przełącznica krzyżowa zapewnia, że każda para wejście-wyjście może być połączona bez blokowania innych połączeń.",
+    "Answer": true,
+    "Position": 346,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przełącznica krzyżowa jest podstawą konstrukcji przełączników w sieciach wielostopniowych.",
+    "Description": "Przełącznice krzyżowe są kluczowym elementem w budowie wielostopniowych sieci przełączających.",
+    "Answer": true,
+    "Position": 347,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przełącznica krzyżowa cechuje ją wysoka złożoność układowa i wysoki koszt.",
+    "Description": "Z powodu dużej liczby połączeń i przełączników, przełącznice krzyżowe są złożone i kosztowne.",
+    "Answer": true,
+    "Position": 348,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przełącznica krzyżowa posiada bardzo wysoką skalowalność.",
+    "Description": "Przełącznice krzyżowe są trudne do skalowania ze względu na złożoność i koszt.",
+    "Answer": false,
+    "Position": 349,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Przełącznica krzyżowa jest wykorzystywana m.in. do komunikacji rdzeni z pamięcią w procesorach wielordzeniowych.",
+    "Description": "Przełącznice krzyżowe mogą być stosowane do łączenia rdzeni procesora z pamięcią.",
+    "Answer": true,
+    "Position": 350,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Protokół MESI zapewnia spójność pamięci podręcznych w systemach wieloprocesorowych.",
+    "Description": "MESI to protokół zarządzania pamięcią podręczną, który zapewnia jej spójność w systemach wieloprocesorowych.",
+    "Answer": true,
+    "Position": 351,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Protokół MESI umożliwia wydajną komunikację w sieciach InfiniBand.",
+    "Description": "MESI nie jest protokołem komunikacyjnym, więc nie wpływa bezpośrednio na wydajność InfiniBand.",
+    "Answer": false,
+    "Position": 352,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Protokół MESI jest stosowany najczęściej w sieciach z wspólną pamięcią.",
+    "Description": "MESI jest powszechnie stosowany w systemach z wspólną pamięcią podręczną.",
+    "Answer": true,
+    "Position": 353,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Protokół MESI chroni przed hazardem sterowania w procesorach superskalarnych.",
+    "Description": "MESI dotyczy spójności pamięci podręcznej, a nie hazardu sterowania.",
+    "Answer": false,
+    "Position": 354,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Podstawą klasyfikacji Flynna jest liczba jednostek przetwarzających i sterujących w systemach komputerowych.",
+    "Description": "Klasyfikacja Flynna opiera się na liczbie strumieni danych i strumieni instrukcji.",
+    "Answer": false,
+    "Position": 355,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Podstawą klasyfikacji Flynna jest liczba strumieni danych i strumieni instrukcji w systemach komputerowych.",
+    "Description": "Klasyfikacja Flynna rozróżnia systemy na podstawie liczby strumieni danych i instrukcji.",
+    "Answer": true,
+    "Position": 356,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W architekturze ccNUMA każdy procesor (węzeł) ma własną lokalną pamięć operacyjną.",
+    "Description": "W systemach ccNUMA każdy węzeł posiada własną pamięć operacyjną, co zmniejsza opóźnienia dostępu.",
+    "Answer": true,
+    "Position": 357,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W architekturze ccNUMA lokalna pamięć operacyjna procesora (węzła) jest częścią pamięci globalnej.",
+    "Description": "Pamięć lokalna w systemach ccNUMA jest częścią całkowitej pamięci systemu, ale dostęp do niej jest szybszy dla lokalnego węzła.",
+    "Answer": true,
+    "Position": 358,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W architekturze ccNUMA każdy procesor ma dostęp do pamięci operacyjnej każdego węzła.",
+    "Description": "W ccNUMA procesory mogą uzyskiwać dostęp do pamięci operacyjnej innych węzłów, chociaż z większymi opóźnieniami.",
+    "Answer": true,
+    "Position": 359,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W architekturze ccNUMA dane są wymieniane między węzłami w formie linii pamięci podręcznej.",
+    "Description": "W systemach ccNUMA dane są wymieniane w postaci linii pamięci podręcznej, co poprawia wydajność.",
+    "Answer": true,
+    "Position": 360,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Rozkazy wektorowe są dostępne w procesorach superskalarnych w ramach rozszerzeń SIMD.",
+    "Description": "SIMD (Single Instruction, Multiple Data) to technika, w której jedna instrukcja wykonuje tę samą operację na wielu danych jednocześnie.",
+    "Answer": true,
+    "Position": 361,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Rozkazy wektorowe zapewniają wydajną realizację algorytmów na wektorach lub macierzach.",
+    "Description": "Rozkazy wektorowe są zoptymalizowane do pracy z dużymi zestawami danych, takimi jak wektory i macierze.",
+    "Answer": true,
+    "Position": 362,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Rozkazy wektorowe w procesorach graficznych nie są wykorzystywane do realizacji wiązek wątków.",
+    "Description": "Rozkazy wektorowe są powszechnie wykorzystywane do realizacji wiązek wątków w procesorach graficznych.",
+    "Answer": false,
+    "Position": 363,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Rozkazy wektorowe zapewniają wydajną realizację aplikacji na poziomie zadania równoległego.",
+    "Description": "Rozkazy wektorowe są używane do wydajnego przetwarzania równoległego na poziomie zadań.",
+    "Answer": true,
+    "Position": 364,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W rozszerzeniach SIMD długość wektora n jest ograniczona rozmiarami rejestrów wektorowych.",
+    "Description": "W SIMD długość wektora jest ograniczona rozmiarem rejestrów wektorowych w procesorze.",
+    "Answer": true,
+    "Position": 365,
+    "Category": "Egzamin2"
   }
-
 ]
