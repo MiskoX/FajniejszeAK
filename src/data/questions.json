@@ -2482,73 +2482,101 @@
     "Category": "Egzamin2"
   },
   {
+    "Question": "Podstawą klasyfikacji Flynn`a jest liczba modułów pamięci operacyjnej w systemach komputerowych.",
+    "Description": "Klasyfikacja Flynna opiera się na liczbie strumieni danych i strumieni instrukcji, a nie na liczbie modułów pamięci operacyjnej.",
+    "Answer": false,
+    "Position": 356,
+    "Category": "Egzamin2"
+  },
+  {
     "Question": "Podstawą klasyfikacji Flynna jest liczba strumieni danych i strumieni instrukcji w systemach komputerowych.",
     "Description": "Klasyfikacja Flynna rozróżnia systemy na podstawie liczby strumieni danych i instrukcji.",
     "Answer": true,
-    "Position": 356,
+    "Position": 357,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Podstawą klasyfikacji Flynn`a jest sposób połączenia jednostek przetwarzających z modułami pamięci operacyjnej.",
+    "Description": "Klasyfikacja Flynna opiera się na liczbie strumieni danych i strumieni instrukcji, a nie na sposobie połączenia jednostek przetwarzających z pamięcią.",
+    "Answer": false,
+    "Position": 358,
     "Category": "Egzamin2"
   },
   {
     "Question": "W architekturze ccNUMA każdy procesor (węzeł) ma własną lokalną pamięć operacyjną.",
     "Description": "W systemach ccNUMA każdy węzeł posiada własną pamięć operacyjną, co zmniejsza opóźnienia dostępu.",
     "Answer": true,
-    "Position": 357,
+    "Position": 359,
     "Category": "Egzamin2"
   },
   {
     "Question": "W architekturze ccNUMA lokalna pamięć operacyjna procesora (węzła) jest częścią pamięci globalnej.",
     "Description": "Pamięć lokalna w systemach ccNUMA jest częścią całkowitej pamięci systemu, ale dostęp do niej jest szybszy dla lokalnego węzła.",
     "Answer": true,
-    "Position": 358,
+    "Position": 360,
     "Category": "Egzamin2"
   },
   {
     "Question": "W architekturze ccNUMA każdy procesor ma dostęp do pamięci operacyjnej każdego węzła.",
     "Description": "W ccNUMA procesory mogą uzyskiwać dostęp do pamięci operacyjnej innych węzłów, chociaż z większymi opóźnieniami.",
     "Answer": true,
-    "Position": 359,
+    "Position": 361,
     "Category": "Egzamin2"
   },
   {
     "Question": "W architekturze ccNUMA dane są wymieniane między węzłami w formie linii pamięci podręcznej.",
     "Description": "W systemach ccNUMA dane są wymieniane w postaci linii pamięci podręcznej, co poprawia wydajność.",
     "Answer": true,
-    "Position": 360,
+    "Position": 362,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "W architekturze ccNUMA do utrzymania spójności pamięci węzłów zazwyczaj wykorzystuje się katalogi.",
+    "Description": "W systemach ccNUMA katalogi (directory) są powszechnie wykorzystywane do zarządzania spójnością pamięci między węzłami.",
+    "Answer": true,
+    "Position": 363,
     "Category": "Egzamin2"
   },
   {
     "Question": "Rozkazy wektorowe są dostępne w procesorach superskalarnych w ramach rozszerzeń SIMD.",
     "Description": "SIMD (Single Instruction, Multiple Data) to technika, w której jedna instrukcja wykonuje tę samą operację na wielu danych jednocześnie.",
     "Answer": true,
-    "Position": 361,
+    "Position": 364,
+    "Category": "Egzamin2"
+  },
+  {
+    "Question": "Rozkazy wektorowe są Rozkazy wektorowe umożliwiają równoległe wykonanie tej samej operacji na jednym lub dwóch zestawach po n danych.",
+    "Description": "SIMD (Single Instruction, Multiple Data) pozwala na wykonywanie tej samej operacji równolegle na jednym lub dwóch zestawach danych.",
+    "Answer": true,
+    "Position": 365,
     "Category": "Egzamin2"
   },
   {
     "Question": "Rozkazy wektorowe zapewniają wydajną realizację algorytmów na wektorach lub macierzach.",
     "Description": "Rozkazy wektorowe są zoptymalizowane do pracy z dużymi zestawami danych, takimi jak wektory i macierze.",
     "Answer": true,
-    "Position": 362,
+    "Position": 366,
     "Category": "Egzamin2"
   },
   {
     "Question": "Rozkazy wektorowe w procesorach graficznych nie są wykorzystywane do realizacji wiązek wątków.",
     "Description": "Rozkazy wektorowe są powszechnie wykorzystywane do realizacji wiązek wątków w procesorach graficznych.",
     "Answer": false,
-    "Position": 363,
+    "Position": 367,
     "Category": "Egzamin2"
   },
   {
     "Question": "Rozkazy wektorowe zapewniają wydajną realizację aplikacji na poziomie zadania równoległego.",
     "Description": "Rozkazy wektorowe są używane do wydajnego przetwarzania równoległego na poziomie zadań.",
     "Answer": true,
-    "Position": 364,
+    "Position": 368,
     "Category": "Egzamin2"
   },
   {
     "Question": "W rozszerzeniach SIMD długość wektora n jest ograniczona rozmiarami rejestrów wektorowych.",
     "Description": "W SIMD długość wektora jest ograniczona rozmiarem rejestrów wektorowych w procesorze.",
     "Answer": true,
-    "Position": 365,
+    "Position": 369,
     "Category": "Egzamin2"
   }
 ]
