@@ -321,8 +321,24 @@ p {
   font-size: 30px;
   font-weight: bold;
 }
+.SingleButton .Button {
+  display: flex;
+  flex-direction: row;  
+  gap: 10px;
+}
 
 @media screen and (max-width: 700px) {
+  .Checkbox{
+    margin-right: 0px;
+  }
+  .SingleButton .Button {
+    margin-top: 35px;
+    justify-items: flex-start;
+    flex-direction: column; 
+  }
+  .SingleButton .SingleButton button {
+    width: 100%; 
+  }
   .Quiz {
     width: 100%;
     padding: 10px;
